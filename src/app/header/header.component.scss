@@ -40,21 +40,20 @@
         }
     }
     .card-right-img{
-        position: absolute;
-        top: 155px;
-        z-index: 1;
-        width: 35%;
-        right: 7%;
+        margin-left: 35%;
+       margin-top: 38px;
+    
         }
     .card-body {
         position: absolute;
         top: 155px;
         z-index: 1;
         width: 35%;
+        display: flex;
     
         .wach-list {
 
-       margin-top: 109px;
+       margin-top: 125px;
           
 button:first-child{
     margin-right: 20px;
@@ -95,6 +94,7 @@ button:first-child{
                 align-items: center;
                 justify-content: center;
                 margin-left: 10px;
+            
 
                 span {
                     margin-left: 3px;
@@ -103,6 +103,18 @@ button:first-child{
                     border-radius: 50%;
                     background-color: black;
                 }
+
+            }
+            .more-btn:hover{
+                  
+                background-color: #e1af12;
+
+
+            }
+            .more-btn:focus{
+                  
+                   box-shadow: 1px 1px 6px 2px #e1af12;
+
             }
 
             p {
@@ -178,16 +190,15 @@ button:first-child{
         .rating-border {
             width: 83px;
             height: 83px;
-            border: 3px solid #e1af12;
+            border: 5px solid #e1af12;
             border-radius: 50%;
             color: #e1af12 !important;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-right: 3px solid #685d50;
+            border-right: 5px solid #685d50;
             font-size: 32px !important;
-            font-family: bold;
-            font-family: myral;
+            font-weight: bold;
             margin-right: 20px;
 
 

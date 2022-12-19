@@ -133,6 +133,9 @@ ul li {
         .costum {
             display: flex;
    
+            .serch-inp:focus{
+background: transparent!important;
+            }
             input{
                 margin-left: 43px;
                 height: 35px;

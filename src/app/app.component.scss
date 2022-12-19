@@ -1,8 +1,11 @@
 .container-fluid{
     width: 1920px;
+    max-width: 100%;
 }
 .container{
    width:  1140px;
+   max-width: 100%;
+   margin: auto;
 }
 body {
     margin: 0px;

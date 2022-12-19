@@ -1,0 +1,263 @@
+.container-fluid {
+    width: 1920px;
+    max-width: 100%;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+ul li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    background-color: #ffffff;
+
+    .container {
+        .row {
+            display: flex;
+        }
+
+        .on-tv {
+            h3 {
+                margin-top: 15px;
+                margin-bottom: 8px !important;
+            }
+
+            font-size: 18px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+
+            .Bottom-line {
+                width: 70px;
+                height: 3px;
+                background-image: linear-gradient(-90deg, #eb7531 0%, #e1af11 100%);
+            }
+
+            hr {
+                margin-bottom: 20px;
+                margin-top: 0px;
+                opacity: 0.200;
+                width: 1140px;
+                height: 1px;
+                background-color: #a4a4a4;
+            }
+        }
+    }
+
+    .card-section {
+
+        .card-body {
+
+            padding: 10px;
+
+            p {
+                opacity: 0.702;
+                font-size: 12px;
+                color: #5b5b5b;
+                font-family: "Panton Nusx3";
+            }
+
+            h3 {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #171717;
+                font-family: "Panton Mtav3";
+            }
+        }
+    }
+}
+
+.more-colum {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    //     img{
+    //         opacity: 0.502;
+    // width: 3px;
+    // height: 3px!important;
+    // background-color: #5b5b5b;
+    // margin: 0px!important;
+
+    //     }
+    //     img:nth-child(2){
+    //         margin-top: 1px!important;
+    //         margin-bottom: 1px!important;
+    //     }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 3px;
+    grid-column-gap: 8px;
+}
+
+.card:hover {
+    background-color: #f3f3f3;
+
+    .card-body:hover {
+        h3 {
+            color: #efa97f;
+        }
+
+
+
+    }
+}
+
+.container-fluid {
+
+
+
+    .inteathr-section {
+
+        background-color: #f3f3f3 !important;
+
+    }
+.inteathr-section {
+    margin-top: 15px;
+}
+    .container {
+
+        .intheatr {
+          padding-top: 30px;
+            font-size: 18px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+
+            h3 {
+                margin-top: 15px;
+                margin-bottom: 8px !important;
+            }
+
+            .Bottom-line {
+                width: 70px;
+                height: 3px;
+                background-image: linear-gradient(-90deg, #eb7531 0%, #e1af11 100%);
+            }
+
+            hr {
+                margin: 0px;
+                opacity: 0.200;
+                width: 1140px;
+                height: 1px;
+                background-color: #a4a4a4;
+            }
+        }
+    }
+}
+.position-a{
+position: absolute;
+}
+.position-r{
+position: relative;
+}
+.play-icon{
+    top:45%;
+    left:45%;
+    display: none;
+  
+}
+.width {
+    width: 271px;
+    height: 140px;
+}
+
+.width5 {
+    width: 560px;
+    height: 300px;
+}
+
+.grid-teatr-item {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-gap: 6px;
+
+
+}
+
+.teatr-item1 {
+    grid-row: span 2;
+}
+.teatr-item1:hover .play-icon {
+    display: block;
+}
+.teatr-item2:hover .play-icon{
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+.teatr-item3:hover .play-icon{
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+.teatr-item4:hover .play-icon{
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+.teatr-item5:hover .play-icon{
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+.teatr-item1 .img:hover  {
+    filter: blur(4px);
+}
+
+.teatr-item2 .img:hover  {
+    filter: blur(4px);
+
+}
+.teatr-item3 .img:hover  {
+    filter: blur(4px);
+}
+.teatr-item4 .img:hover  {
+    filter: blur(4px);
+}
+.teatr-item5 .img:hover  {
+    filter: blur(4px);
+}
+.ads-fluid{
+margin-bottom: 20px;
+margin-top: 30px;
+   .adscolor{
+    background-color: #171717;
+} 
+}
+.movie-card{
+    height: 550px;
+    width: 100%;
+    background-color: #a4a4a4;
+    h1{
+        background-color: #eb7531;
+    }
+}
