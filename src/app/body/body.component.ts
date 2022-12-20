@@ -8,34 +8,48 @@ import { ImdbserviceService } from '../imdbservice.service';
 })
 export class BodyComponent implements OnInit {
 
-  MovielistData:any ;
+  show = false;
+
+
+  // changeHeightSection(){
+  // this.show = this.show =="show" ? "hide" : "show"
+  // }
+  MovielistData:any;
+  SliderData:any;
 
   constructor(
     
-    private Movielist:ImdbserviceService
+    private Movielist:ImdbserviceService,
+    private slider:ImdbserviceService
   ) {
 
    }
 
   ngOnInit(): void {
-    // this.rs.getBook().subscribe((data: any)=>{
-    //   this.books = data.books;
-    //   console.log(this.books);
-    // }) 
 
-// this.Movielist.GetMovieData().subscribe((response:any)=>{
-// this.MovielistData = response;
-//    console.log(this.MovielistData.title.id);
-   
-//     })
+
+    
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
 
-  console.log(this.MovielistData);
+  console.log(this.MovielistData.pagination.data);
+  
+})
+this.slider.GetSliderData().subscribe((response:any)=> {
+  this.SliderData = response
+
+  console.log(this.SliderData.lists);
   
 })
       
-     
+
+  }
+
+
+  ChangeInfo(array:any){
+this.MovielistData.poster = array;
+console.log(array);
+
   }
 
 }

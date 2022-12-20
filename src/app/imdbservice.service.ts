@@ -15,9 +15,10 @@ export class ImdbserviceService {
 
 
   GetMovieData(){
-    return this.http.get('assets/DB/MovieData.json')
-
-    
-  }
+    return this.http.get('https://imdb.ge/secure/titles?type=movie&onlyStreamable=false&page=1&perPage=16');
+}
+GetSliderData(){
+  return this.http.get('https://imdb.ge/secure/homepage/lists');
+}
   
 }
