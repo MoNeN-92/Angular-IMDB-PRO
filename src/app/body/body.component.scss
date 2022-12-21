@@ -1,6 +1,7 @@
 .container-fluid {
     width: 1920px;
     max-width: 100%;
+    margin: auto;
 }
 
 .container {
@@ -96,18 +97,6 @@ a {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    //     img{
-    //         opacity: 0.502;
-    // width: 3px;
-    // height: 3px!important;
-    // background-color: #5b5b5b;
-    // margin: 0px!important;
-
-    //     }
-    //     img:nth-child(2){
-    //         margin-top: 1px!important;
-    //         margin-bottom: 1px!important;
-    //     }
 }
 
 .grid-container {
@@ -189,7 +178,6 @@ a {
     top: 45%;
     left: 45%;
     display: none;
-
 }
 
 .width {
@@ -207,8 +195,6 @@ a {
     display: grid;
     grid-template-columns: 50% 25% 25%;
     grid-gap: 6px;
-
-
 }
 
 .teatr-item1 {
@@ -263,7 +249,10 @@ a {
 .teatr-item5 .img:hover {
     filter: blur(4px);
 }
-
+.ads-img{
+    width: 100%;
+    max-width: 100%;
+}
 .ads-fluid {
     margin-bottom: 20px;
     margin-top: 30px;
@@ -278,22 +267,19 @@ a {
     display: grid;
     grid-template-columns: repeat(5, 20%);
 
-    // grid-gap: 6px;
     .card-body1 {
         border: 1px solid transparent;
+       
 
         .Movie-year {
             opacity: 0.800;
             font-size: 14px;
             color: #171717;
-            // font-weight: bold;
             font-family: "Panton Mtav3";
             text-align: center;
-            // margin: 0px;
         }
 
         .Movie-Name {
-            // margin: 0px;
             opacity: 0.800;
             font-size: 14px;
             color: #171717;
@@ -306,8 +292,12 @@ a {
             padding: 6px;
 
             .poster {
-                height: 300px;
                 width: 206px;
+                max-width: 100%;
+            }
+            .poster1 {
+                width: 206px;
+                max-width: 100%;
             }
 
         }
@@ -316,12 +306,11 @@ a {
 }
 
 .card-body1:hover {
-    border-radius: 5px;
+ 
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
     background-color: #fdfdfd;
     transform: scale(1.01);
     cursor: pointer;
-    margin-bottom: 7px;
 }
 
 .card-body1:hover .play-icon {
@@ -333,11 +322,15 @@ a {
 .show {
     overflow: visible !important;
     height: auto !important;
+    transition: all 0.3;
+    
 }
 
 .hide {
     height: 877px;
     overflow: hidden;
+    transition: all 0.3;
+    
 }
 
 .show-more-center {
@@ -428,10 +421,35 @@ a {
         width: 100%;
         background-color: #101010;
         bottom: 0px;
-        .grid-items{
-            display: grid;
-            grid-template-columns: repeat(10, 100%);
+        .right-click{
+            right: 10%;
+            top: 50%;
+            font-size: 23px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            i{
+                color: #fff;
+            }
+            i:hover{
+                transform: scale(1.1);
+            }
         }
+        .left-click{
+            left: 10%;
+            top: 50%;
+            font-size: 23px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            i{
+                color: #fff;
+            }
+            i:hover{
+                transform: scale(1.1);
+            }
+        }
+     
     }
 }
 .Movie-Name-font{
@@ -440,6 +458,10 @@ a {
     font-weight: bold;
     font-family: "Panton Mtav3";
     text-align: center;
+}
+.card-body2{
+    padding: 11px!important;
+    border-radius: 3px!important;
 }
 .card-body2:hover {
     border-radius: 5px;
@@ -461,15 +483,43 @@ a {
     overflow: hidden;
 }
 .carusel-items{
-    transition: linear 0.6s;
+    margin-top: 25px;
+    transition: all 0.6s;
     position: relative;
-    left: 0%;
-    right: 0%;
+ 
 
-    &.right-click{
-    left: 100%!important;
+
+.movie-card1{
+ 
+    .grid-items{
+        display: grid;
+        grid-template-columns: repeat(16, 20%);
+        justify-items: center;
+    }
+    .poster1 {
+        height: 300px;
+        width: 206px;
+    }
+    .card-body1 {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-bottom: 7px;
+
+        .Movie-year {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
+
+        .Movie-Name {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
 }
-&.left-click{
-    left: -100%!important;
-}
-}
+}}

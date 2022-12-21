@@ -9,6 +9,7 @@ import { HeadComponent } from './head/head.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 
 
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HeadComponent,
     HeaderComponent,
-    BodyComponent
+    BodyComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,

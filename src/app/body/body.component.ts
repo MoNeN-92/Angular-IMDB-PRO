@@ -11,14 +11,13 @@ export class BodyComponent implements OnInit {
   show = false;
 
 
-  // changeHeightSection(){
-  // this.show = this.show =="show" ? "hide" : "show"
-  // }
+ 
   MovielistData:any;
   SliderData:any;
+  SerialsData:any
 
   constructor(
-    
+    private Serials:ImdbserviceService,
     private Movielist:ImdbserviceService,
     private slider:ImdbserviceService
   ) {
@@ -28,7 +27,13 @@ export class BodyComponent implements OnInit {
   ngOnInit(): void {
 
 
-    
+    this.Serials.GetSeriesData().subscribe((SerData:any)=>{
+      this.SerialsData = SerData
+      console.log(this.SerialsData.pagination.data);
+      
+
+    })
+
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
 
@@ -38,7 +43,7 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
 this.slider.GetSliderData().subscribe((response:any)=> {
   this.SliderData = response
 
-  console.log(this.SliderData.lists);
+  console.log(this.SliderData.lists[0].items[0].name);
   
 })
       
@@ -46,10 +51,23 @@ this.slider.GetSliderData().subscribe((response:any)=> {
   }
 
 
-  ChangeInfo(array:any){
-this.MovielistData.poster = array;
-console.log(array);
+  ChangeInfo(s:any){
+this.MovielistData = s;
+console.log(s);
 
   }
+
+
+  carousel:any = {
+    'left': '0%',
+   
+  }
+
+  LeftClick(){
+   this.carousel['left'] = (Number (this.carousel['left'].split ('%')[0]) + 20) +"%"
+  };
+  RightClick(){
+    this.carousel['left'] = (Number (this.carousel['left'].split ('%')[0]) - 20) +"%"
+   };
 
 }

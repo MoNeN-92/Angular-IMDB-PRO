@@ -23,7 +23,11 @@
         background-image: linear-gradient(43deg, #452d21 0%, #4f5739 100%);
     }
 }
-
+.container-fluid{
+    width: 1920px;
+    max-width: 100%;
+    margin: auto;
+}
 .container {
     width: 1140px;
     max-width: 100%;
@@ -48,8 +52,12 @@
         position: absolute;
         top: 155px;
         z-index: 1;
-        width: 35%;
-        display: flex;
+        max-width: 100%;
+        gap: 20;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 50px;
+ 
     
         .wach-list {
 

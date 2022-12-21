@@ -254,7 +254,7 @@
 
             <div class="container">
                 <div class="ads">
-                    <img src="../../assets/img/lexsus.png" alt="">
+                    <img class="ads-img" src="../../assets/img/lexsus.png" alt="">
                 </div>
             </div>
         </div>
@@ -268,7 +268,7 @@
             <hr>
         </div>
         <div class="movie-card">
-            <div class="card-body1" *ngFor="let movie of MovielistData.pagination.data">
+            <div class="card-body1" routerLink="/MoviePage" *ngFor="let movie of MovielistData.pagination.data">
                 <div class="position-r background-img ">
                     <img class="poster" src="{{movie.poster}}" alt="">
                     <img class="position-a play-icon" src="../../assets/img/Play Icon.png" alt="">
@@ -297,7 +297,7 @@
 
             <div class="container">
                 <div class="ads">
-                    <img src="../../assets/img/lexsus.png" alt="">
+                    <img class="ads-img" src="../../assets/img/lexsus.png" alt="">
                 </div>
             </div>
         </div>
@@ -326,8 +326,8 @@
                         </div>
 
                     </div>
-                    <div class="coming-body-content" *ngFor="let movie of MovielistData.pagination.data,">
-                        <h1 class="movie-name">{{movie.data}}</h1>
+                    <div class="coming-body-content" >
+                        <h1 class="movie-name"></h1>
                         <div class="rating-stars">
                             <img src="../../assets/img/Rating Icons stars.png" alt="">
                             <span class="relase-data">07 September, 2018</span>
@@ -351,18 +351,29 @@
 
 
                 <div class="card-area">
+                    <button class="left-click position-a">
+                        <i (click)="LeftClick()" class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="right-click position-a">
+                        <i (click)="RightClick()" class="fa-solid fa-chevron-right"></i>
+                    </button>
                     <div class="container over-flow">
-                        <div class="carusel-items ">
-                            <div class="grid-items">
-                                <div class="movie-card" >
-                                    <div class="card-body2 card-body1" *ngFor="let movie of MovielistData.pagination.data, index as s " (click)="ChangeInfo(s)" >
+                        <div class="carusel-items " [ngStyle]="carousel">
+
+                            <div class="movie-card1">
+                                <div class="grid-items">
+                                    
+                                    <div class="card-body2 card-body1" routerLink="/MoviePage" *ngFor="let movies of SliderData.lists ">
                                         <div class="position-r background-img ">
-                                            <img class="poster" src="{{movie.poster}}" alt="">
-                                            <img class="position-a play-icon" src="../../assets/img/Play Icon.png"
-                                                alt="">
+
+                                            <img class="poster1" src="{{movies.items[0].poster}} " alt="">
+
+                                            <img class="position-a play-icon" src="../../assets/img/Play Icon.png"  alt="">
+                                              
                                         </div>
-                                        <p class="Movie-Name-font ">{{movie.name}}</p>
-                                        <p class="Movie-Name-font">{{movie.year}}</p>
+                                        <p class="Movie-Name-font ">{{movies.items[0].name}}</p>
+                                        <p class="Movie-Name-font">{{movies.items[0].year}}</p>
                                     </div>
 
 
@@ -371,13 +382,14 @@
                             </div>
 
                         </div>
-                  
+
                     </div>
 
                 </div>
-                
+
             </div>
 
         </div>
     </div>
+
 </section>

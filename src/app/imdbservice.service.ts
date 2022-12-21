@@ -20,5 +20,9 @@ export class ImdbserviceService {
 GetSliderData(){
   return this.http.get('https://imdb.ge/secure/homepage/lists');
 }
+GetSeriesData(){
+  return this.http.get('https://imdb.ge/secure/titles?type=series&onlyStreamable=false&page=1&perPage=16&fbclid=IwAR3LC4V0mt_sQzfI5MO9E09pOdKN4b_ei359nsvjXWFQ81nX_zYiEZZSnMQ');
+}
+
   
 }
