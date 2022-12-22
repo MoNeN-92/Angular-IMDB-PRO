@@ -8,6 +8,8 @@ const routes: Routes = [
   path:'MoviePage',
   component:MoviePageComponent
 },
+
+
 ];
 
 @NgModule({

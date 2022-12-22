@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ImdbserviceService } from '../imdbservice.service';
 
 @Component({
   selector: 'app-movie-page',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviePageComponent implements OnInit {
 
-  constructor() { }
+  MovielistData:any;
+
+  constructor(
+    private Movielist:ImdbserviceService,
+  ) { }
 
   ngOnInit(): void {
+
+    
+this.Movielist.GetMovieData().subscribe((res:any)=> {
+  this.MovielistData = res
+
+  console.log(this.MovielistData.pagination.data);
+  
+})
+    
   }
 
 }

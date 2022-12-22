@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="container-fluid">
     <div class="container">
         <div class="on-tv">
@@ -267,7 +268,9 @@
             <div class="Bottom-line"></div>
             <hr>
         </div>
-        <div class="movie-card">
+        <div  class="movie-card">
+           
+      
             <div class="card-body1" routerLink="/MoviePage" *ngFor="let movie of MovielistData.pagination.data">
                 <div class="position-r background-img ">
                     <img class="poster" src="{{movie.poster}}" alt="">
