@@ -28,14 +28,17 @@ export class BodyComponent implements OnInit {
    }
 
    id = this.activeRouter.snapshot.params['id']
-   
+
    
   ngOnInit(): void {
 
+    // console.log(this.activeRouter.snapshot.params);
+    
+    
 
     this.Serials.GetSeriesData().subscribe((SerData:any)=>{
       this.SerialsData = SerData
-      console.log(this.SerialsData.pagination.data);
+      // console.log(this.SerialsData.pagination.data);
       
 
     })
@@ -43,14 +46,15 @@ export class BodyComponent implements OnInit {
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
 
-  console.log(this.MovielistData.pagination.data);
+  // console.log(this.MovielistData.pagination.data);
+
+  
   
   
 })
 this.slider.GetSliderData().subscribe((response:any)=> {
   this.SliderData = response
 
-  console.log(this.SliderData.lists[0].items[0]);
   
 })
       
@@ -60,7 +64,6 @@ this.slider.GetSliderData().subscribe((response:any)=> {
 
   ChangeInfo(s:any){
 this.MovielistData = s;
-console.log(s);
 
   }
 
