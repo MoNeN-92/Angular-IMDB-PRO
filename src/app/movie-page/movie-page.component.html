@@ -1,20 +1,24 @@
-<div class="container-fluid">
-    <div class="cover-photo">
-        <img src="" alt="">
-    </div>
-    <div class="container">
-      hf
+<div class="container-fluid" >
+    <div class="cover-photo"  *ngFor="let movies of MovielistData.pagination.data">
+        <img src="{{movies.poster}}" alt="">
+      </div>
+      <div class="container">
+
         <div class="play-trailer">
 
             <div class="play-icon">
-
+                <img src="../../assets/img/Play Button.png" alt="">
             </div>
         </div>
         <div class="watch-buttons">
+            <button class="btn watch-list"> + &nbsp; &nbsp; Wacht List &nbsp; &nbsp; <i
+                    class="fa-solid carett fa-caret-down"></i> </button>
+            <button class="btn watch-trailer"> <i class="fa-solid carett fa-caret-right"></i> &nbsp; &nbsp;
+                watch-trailer</button>
 
         </div>
-        <div class="movie-poster" *ngFor="let mov of MovielistData.pagination.data">
-            <img src="" alt="">
+        <div class="movie-poster">
+            <img src="../../assets/img/galveston poster.png" alt="">
         </div>
     </div>
 </div>

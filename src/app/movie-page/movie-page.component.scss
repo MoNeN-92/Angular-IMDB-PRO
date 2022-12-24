@@ -1,0 +1,136 @@
+.container-fluid {
+    width: 1920px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+ul li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+a.router-link-active {
+    color: #ffc107 !important;
+}
+
+li a {
+    cursor: pointer;
+}
+
+.cover-photo {
+    opacity: 0.702;
+    width: 100%;
+    height: 733px;
+    position: relative;
+    background-image: linear-gradient(43deg, #615954 0%, #615954 100%);
+
+    img {
+
+
+        width: 100%;
+        // height: 838px;
+        max-width: 100%;
+    }
+}
+
+.container {
+    .watch-buttons {
+      margin-top: 30px;
+     float: right;
+        .watch-list {
+            cursor: pointer;
+
+            text-transform: uppercase;
+            margin-right: 17px;
+            border: none;
+            width: 200px;
+            max-width: 100%;
+            height: 50px;
+            border-radius: 3px;
+            background-color: #ffffff;
+      
+
+        }
+
+        .watch-trailer {
+            cursor: pointer;
+
+            text-transform: uppercase;
+            border: none;
+            width: 200px;
+            height: 50px;
+            border-radius: 3px;
+            background-color: #ffffff;
+        }
+
+        .watch-list:hover {
+            background-color: #e1af12;
+        }
+
+     
+
+        .watch-trailer:hover {
+            background-color: #e1af12;
+        }
+
+
+
+    }
+
+    position: absolute;
+    top: 155px;
+    left: 0;
+    right: 0;
+
+
+
+    .play-trailer {
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 590px;
+        border-radius: 5px;
+        filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7));
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+
+        .play-icon {
+            text-align: center;
+
+            img {
+                position: absolute;
+                top: 47%;
+                left: 50%;
+            }
+        }
+
+    }
+}
+.movie-poster{
+    position: absolute;
+    top: 50%;
+}

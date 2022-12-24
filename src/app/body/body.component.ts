@@ -1,3 +1,4 @@
+import { ActivatedRoute , Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ImdbserviceService } from '../imdbservice.service';
 
@@ -14,16 +15,21 @@ export class BodyComponent implements OnInit {
  
   MovielistData:any;
   SliderData:any;
-  SerialsData:any
+  SerialsData:any;
 
   constructor(
     private Serials:ImdbserviceService,
     private Movielist:ImdbserviceService,
-    private slider:ImdbserviceService
+    private slider:ImdbserviceService,
+    private activeRouter:ActivatedRoute
   ) {
+
 
    }
 
+   id = this.activeRouter.snapshot.params['id']
+   
+   
   ngOnInit(): void {
 
 
@@ -39,11 +45,12 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
 
   console.log(this.MovielistData.pagination.data);
   
+  
 })
 this.slider.GetSliderData().subscribe((response:any)=> {
   this.SliderData = response
 
-  console.log(this.SliderData.lists[0].items[0].name);
+  console.log(this.SliderData.lists[0].items[0]);
   
 })
       
