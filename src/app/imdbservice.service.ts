@@ -23,6 +23,11 @@ GetSliderData(){
 GetSeriesData(){
   return this.http.get('https://imdb.ge/secure/titles?type=series&onlyStreamable=false&page=1&perPage=16&fbclid=IwAR3LC4V0mt_sQzfI5MO9E09pOdKN4b_ei359nsvjXWFQ81nX_zYiEZZSnMQ');
 }
+BackMoviePage(){
+  return this.http.get('https://imdb.ge/secure/titles/1?fbclid=IwAR19sBCDHGNASuHXcb-bxo5nyuzpsZj6d5F6yP5sEqHbk1SLtPaN4HRbCh0');
+}
+
+
 
   
 }

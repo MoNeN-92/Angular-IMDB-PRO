@@ -125,12 +125,18 @@ li a {
                 position: absolute;
                 top: 47%;
                 left: 50%;
+             
             }
         }
 
     }
 }
 .movie-poster{
+    img{
+            width: 400px;
+       height: 600px;
     position: absolute;
     top: 50%;
+    }
+   
 }
