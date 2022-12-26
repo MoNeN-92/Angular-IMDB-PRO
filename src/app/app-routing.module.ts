@@ -19,7 +19,8 @@ const routes: Routes = [
 {
   path:'HeaderPage',
   component:HeaderComponent
-}
+},
+
 
 
 ];

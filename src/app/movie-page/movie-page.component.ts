@@ -12,47 +12,41 @@ export class MoviePageComponent implements OnInit {
   MovielistData:any;
   BackMoviePageData:any
   MovieBackData:any
-
+  starsPageData:any
   constructor(
     private activeRouter: ActivatedRoute,
     private Movielist:ImdbserviceService,
     private BackMoviePage:ImdbserviceService,
-    private MovieBack:ImdbserviceService
+    private MovieBack:ImdbserviceService,
+    private starsPage:ImdbserviceService
+
   ) { }
 
  
-  id = this.activeRouter.snapshot.params['id']
-
+      id = this.activeRouter.snapshot.params['id'];
 
 
   ngOnInit(): void {
-// console.log(this.activeRouter.snapshot.params);
-console.log(this.activeRouter);
-console.log(this.id);
 
 
 
-this.MovieBack.BackMoviePage().subscribe((resp:any) => {
-  this.MovieBackData = resp
-  // console.log(this.MovieBackData.pagination.data);
-  
-})
-
-    this.BackMoviePage.BackMoviePage().subscribe((ress:any)=> {
-      this.BackMoviePageData = ress
+ this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
+          this.BackMoviePageData = ress
     
-      // console.log(this.BackMoviePageData.title.name);
+              console.log(this.BackMoviePageData.title.locations);
+              
+    
+        })
+ 
+console.log(this.activeRouter.snapshot);
 
 
-    })
 
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
-  // console.log(this.MovielistData);
-  // console.log(this.MovielistData.pagination.data);
-  // console.log(this.MovielistData.pagination.data['id']);
-  
+// console.log(this.MovielistData.pagination.data);
 
+  
   
 })
       
