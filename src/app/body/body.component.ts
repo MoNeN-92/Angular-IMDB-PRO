@@ -16,18 +16,21 @@ export class BodyComponent implements OnInit {
   MovielistData:any;
   SliderData:any;
   SerialsData:any;
+  BackMoviePageData:any
 
   constructor(
     private Serials:ImdbserviceService,
     private Movielist:ImdbserviceService,
     private slider:ImdbserviceService,
-    private activeRouter:ActivatedRoute
+    private activeRouter:ActivatedRoute,
+    private BackMoviePage:ImdbserviceService
+
   ) {
 
 
    }
 
-  //  id = this.activeRouter.snapshot.params['id']
+   id = this.activeRouter.snapshot.params['id']
 
    
   ngOnInit(): void {
@@ -38,11 +41,18 @@ export class BodyComponent implements OnInit {
       
 
     // })
+    this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
+      this.BackMoviePageData = ress
+
+          console.log(this.BackMoviePageData);
+          
+
+    })
 
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
 
-  console.log(this.MovielistData.pagination.data);
+  // console.log(this.MovielistData.pagination.data);
 
   
   
