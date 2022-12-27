@@ -58,21 +58,10 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
   
   
 })
-// this.slider.GetSliderData().subscribe((response:any)=> {
-//   this.SliderData = response
 
-  
-// })
       
 
   }
-
-
-//   ChangeInfo(s:any){
-// this.MovielistData = s;
-
-//   }
-
 
   carousel:any = {
     'left': '0%',
