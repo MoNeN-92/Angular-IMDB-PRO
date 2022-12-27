@@ -37,6 +37,8 @@ export class MoviePageComponent implements OnInit {
               
     
         })
+
+        
  
 console.log(this.activeRouter.snapshot);
 
