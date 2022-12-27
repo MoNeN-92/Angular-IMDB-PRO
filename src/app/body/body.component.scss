@@ -1,0 +1,755 @@
+@font-face {
+    font-family: myral;
+    src: url(../../assets/font/MYRIADPRO-REGULAR.OTF);
+}
+
+.slider-content {
+   .cover-img{
+        position: relative;
+        width: 1920px;
+        max-width: 100%;
+        height: 960px;
+
+    }
+
+    .blur {
+        top: 123px;
+        position: absolute;
+        z-index: 1;
+        opacity: 0.800;
+        width: 1920px;
+        max-width: 100%;
+        height: 891px;
+        background-image: linear-gradient(43deg, #452d21 0%, #4f5739 100%);
+    }
+}
+.container-fluid{
+    width: 1920px;
+    max-width: 100%;
+    margin: auto;
+}
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            display: flex;
+
+
+        }
+    }
+    .card-right-img{
+        margin-left: 35%;
+       margin-top: 38px;
+    
+        }
+    .card-body {
+        position: absolute;
+        top: 155px;
+        z-index: 1;
+        max-width: 100%;
+        gap: 20;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 50px;
+ 
+    
+        .wach-list {
+
+       margin-top: 125px;
+          
+button:first-child{
+    margin-right: 20px;
+}
+            
+
+                .trailer {
+                    background-color: #ffffff;
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 3px;
+                    border: none;
+                    font-family: myral;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .trailer:hover{
+                    background-color: #e1af12
+                }
+            
+        }
+
+        .stars-actor {
+            display: flex;
+            font-family: myral;
+            font-size: 14px;
+            margin-top: 33px;
+            align-items: center;
+
+            .more-btn {
+                width: 50px;
+                height: 35px;
+                border-radius: 3px;
+                background-color: #ffffff;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+            
+
+                span {
+                    margin-left: 3px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+
+            }
+            .more-btn:hover{
+                  
+                background-color: #e1af12;
+
+
+            }
+            .more-btn:focus{
+                  
+                   box-shadow: 1px 1px 6px 2px #e1af12;
+
+            }
+
+            p {
+                color: #89827f;
+
+            }
+
+            img {
+                height: 51px;
+                width: 51px;
+                border-radius: 50%;
+
+
+            }
+        }
+
+        .director-writer {
+            font-family: myral;
+            font-size: 14px;
+            margin-top: 36px;
+
+            p {
+                color: #89827f;
+
+            }
+
+            span {
+                color: #e1af12;
+            }
+        }
+
+        .mov-subtitle {
+            font-family: myral;
+
+            h3 {
+                font-size: 14px;
+
+                text-transform: uppercase;
+                color: #a3a3a3 !important;
+            }
+
+            p {
+                color: #fefefe;
+                font-size: 12px;
+
+
+            }
+        }
+
+        .movie-info {
+            display: flex;
+            align-items: center;
+
+            .movinf {
+                display: flex;
+                flex-direction: column;
+            }
+
+            span {
+                color: #e5e4e3;
+                font-family: myral;
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 14px;
+                font-family: myral;
+                color: #848281;
+            }
+
+        }
+
+        .rating-border {
+            width: 83px;
+            height: 83px;
+            border: 5px solid #e1af12;
+            border-radius: 50%;
+            color: #e1af12 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 5px solid #685d50;
+            font-size: 32px !important;
+            font-weight: bold;
+            margin-right: 20px;
+
+
+        }
+
+        .card-title {
+
+            color: #ffffff;
+            font-size: 34px;
+            font-family: myral;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            span {
+                font-size: 18px;
+                color: #b48b13;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.container-fluid {
+    width: 1920px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+ul li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    background-color: #ffffff;
+
+    .container {
+        .row {
+            display: flex;
+        }
+
+        .on-tv {
+            h3 {
+                margin-top: 15px;
+                margin-bottom: 8px !important;
+            }
+
+            font-size: 18px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+
+            .Bottom-line {
+                width: 70px;
+                height: 3px;
+                background-image: linear-gradient(-90deg, #eb7531 0%, #e1af11 100%);
+            }
+
+            hr {
+                margin-bottom: 20px;
+                margin-top: 0px;
+                opacity: 0.200;
+                width: 1140px;
+                height: 1px;
+                background-color: #a4a4a4;
+            }
+        }
+    }
+
+    .card-section {
+
+        .card-bodyy {
+
+            padding: 10px;
+
+            p {
+                opacity: 0.702;
+                font-size: 12px;
+                color: #5b5b5b;
+                font-family: "Panton Nusx3";
+            }
+
+            h3 {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #171717;
+                font-family: "Panton Mtav3";
+            }
+        }
+    }
+}
+
+.more-colum {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 3px;
+    grid-column-gap: 8px;
+}
+
+.card:hover {
+    background-color: #f3f3f3;
+
+    .card-bodyy:hover {
+        h3 {
+            color: #efa97f;
+        }
+
+
+
+    }
+}
+
+.container-fluid {
+
+
+
+    .inteathr-section {
+
+        background-color: #f3f3f3 !important;
+
+    }
+
+    .inteathr-section {
+        margin-top: 15px;
+    }
+
+
+
+
+}
+
+.intheatr {
+    padding-top: 30px;
+    font-size: 18px;
+    color: #171717;
+    font-weight: bold;
+    font-family: "Panton Mtav3";
+
+    .h3 {
+        margin-top: 15px;
+        margin-bottom: 8px !important;
+    }
+
+    .Bottom-line {
+        width: 70px;
+        height: 3px;
+        background-image: linear-gradient(-90deg, #eb7531 0%, #e1af11 100%);
+    }
+
+    hr {
+        margin: 0px;
+        opacity: 0.200;
+        width: 1140px;
+        height: 1px;
+        background-color: #a4a4a4;
+    }
+}
+
+.position-a {
+    position: absolute;
+}
+
+.position-r {
+    position: relative;
+}
+
+.play-icon {
+    top: 45%;
+    left: 45%;
+    display: none;
+}
+
+.width {
+    width: 271px;
+    height: 140px;
+}
+
+.width5 {
+    width: 560px;
+    height: 300px;
+}
+
+.grid-teatr-item {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-gap: 6px;
+}
+
+.teatr-item1 {
+    grid-row: span 2;
+}
+
+.teatr-item1:hover .play-icon {
+    display: block;
+}
+
+.teatr-item2:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+
+.teatr-item3:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+
+.teatr-item4:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+
+.teatr-item5:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+
+.teatr-item1 .img:hover {
+    filter: blur(4px);
+}
+
+.teatr-item2 .img:hover {
+    filter: blur(4px);
+
+}
+
+.teatr-item3 .img:hover {
+    filter: blur(4px);
+}
+
+.teatr-item4 .img:hover {
+    filter: blur(4px);
+}
+
+.teatr-item5 .img:hover {
+    filter: blur(4px);
+}
+.ads-img{
+    width: 100%;
+    max-width: 100%;
+}
+.ads-fluid {
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    .adscolor {
+        background-color: #171717;
+    }
+}
+
+
+.movie-card {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+
+    .card-body1 {
+        border: 1px solid transparent;
+       
+
+        .Movie-year {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
+
+        .Movie-Name {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
+
+        .background-img {
+            padding: 6px;
+
+            .poster {
+                width: 206px;
+                max-width: 100%;
+            }
+            .poster1 {
+                width: 206px;
+                max-width: 100%;
+            }
+
+        }
+    }
+
+}
+
+.card-body1:hover {
+ 
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    background-color: #fdfdfd;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.card-body1:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+
+.show {
+    overflow: visible !important;
+    height: auto !important;
+    transition: all 0.3;
+    
+}
+
+.hide {
+    height: 877px;
+    overflow: hidden;
+    transition: all 0.3;
+    
+}
+
+.show-more-center {
+    text-align: center;
+}
+
+.show-more-movies {
+    border: none;
+    cursor: pointer;
+
+    p {
+        margin: 0px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Panton Mtav3";
+        text-align: center;
+    }
+
+    width: 172px;
+    height: 35px;
+    background-image: linear-gradient(90deg, #e1ad11 0%, #eb7531 100%);
+}
+
+.container-fluid {
+    .coming-img-content{
+        z-index: 11;
+        position: absolute;
+        top: 15%;
+        z-index: 11;
+        right: 0px;
+    }
+    .coming-body-content {
+     
+        z-index: 11;
+        position: absolute;
+        top: 15%;
+        z-index: 11;
+  
+
+        .rating-stars {
+            width: 50%;
+            padding-right: 15px;
+            .more-info {
+                font-size: 12px;
+                color: #ec7632;
+                font-family: "Panton Nusx3";
+            }
+
+            .relase-data {
+                margin-left: 33px;
+                font-size: 12px;
+                color: #ffffff;
+                font-family: "Panton Nusx3";
+            }
+
+            font-size: 11px;
+        }
+
+        .movie-name {
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+        }
+    }
+
+
+    .com {
+        z-index: 11;
+        position: absolute;
+        top: 0px;
+    }
+
+    overflow: hidden;
+
+    .cover {
+
+        z-index: 5;
+        position: relative;
+    }
+
+    .card-area {
+        z-index: 10;
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        background-color: #101010;
+        bottom: 0px;
+        .right-click{
+            right: 10%;
+            top: 50%;
+            font-size: 23px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            i{
+                color: #fff;
+            }
+            i:hover{
+                transform: scale(1.1);
+            }
+        }
+        .left-click{
+            left: 10%;
+            top: 50%;
+            font-size: 23px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            i{
+                color: #fff;
+            }
+            i:hover{
+                transform: scale(1.1);
+            }
+        }
+     
+    }
+}
+.Movie-Name-font{
+    font-size: 14px;
+    color: #222222!important;
+    font-weight: bold;
+    font-family: "Panton Mtav3";
+    text-align: center;
+    margin-top: 5px;
+}
+.card-body2{
+    padding: 11px!important;
+    border-radius: 3px!important;
+}
+.card-body2:hover {
+    border-radius: 5px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    background-color: #060606;
+    transform: scale(1.01);
+    cursor: pointer;
+    margin-bottom: 7px;
+    .Movie-Name-font{
+        color: #ffffff!important;
+    }
+}
+.card-body2:hover .play-icon {
+    display: block;
+    top: 35%;
+    left: 40%;
+}
+.over-flow{
+    overflow: hidden;
+}
+.carusel-items{
+    margin-top: 12.5px;
+    transition: all 0.6s;
+    position: relative;
+ 
+
+
+.movie-card1{
+ 
+    .grid-items{
+        display: grid;
+        grid-template-columns: repeat(16, 20%);
+        justify-items: center;
+    }
+    .poster1 {
+        height: 300px;
+        width: 206px;
+    }
+    .card-body1 {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-bottom: 7px;
+
+        .Movie-year {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
+
+        .Movie-Name {
+            opacity: 0.800;
+            font-size: 14px;
+            color: #171717;
+            font-weight: bold;
+            font-family: "Panton Mtav3";
+            text-align: center;
+        }
+}
+}}
