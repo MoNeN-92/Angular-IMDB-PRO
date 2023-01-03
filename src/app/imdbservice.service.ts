@@ -29,6 +29,10 @@ BackMoviePage(id:any){
   return this.http.get(`https://imdb.ge/secure/titles/${id}`);
 }
 
+serchMovie(query:any){
+  return this.http.get(`https://imdb.ge/secure/search/${query}`)
+}
+
 
 
 }

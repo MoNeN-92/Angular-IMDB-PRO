@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { SerchPageComponent } from './serch-page/serch-page.component';
 
 
 
@@ -21,7 +22,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
     HeadComponent,
     HeaderComponent,
     BodyComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    SerchPageComponent
   ],
   imports: [
     BrowserModule,

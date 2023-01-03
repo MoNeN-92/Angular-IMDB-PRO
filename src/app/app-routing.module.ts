@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { BodyComponent } from './body/body.component';
 import { HeaderComponent } from './header/header.component';
+import { SerchPageComponent } from './serch-page/serch-page.component';
 
 
 
@@ -21,6 +22,10 @@ const routes: Routes = [
   component:HeaderComponent
 },
 
+{
+  path:'serch-page/:query',
+  component:SerchPageComponent
+}
 
 
 ];

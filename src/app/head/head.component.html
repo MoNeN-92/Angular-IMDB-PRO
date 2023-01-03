@@ -3,13 +3,20 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="../../assets/img/imdb.png" alt="">
+                <a href=""> <img src="../../assets/img/imdb.png" alt=""></a>
+               
             </div>
 
             <div class="col">
-
+                <!-- [routerLink]="'/serch-page/' + mov.id " -->
                 <form action="" class="costum">
-                    <input class="serch-inp " placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
+                    <input #serchinput class="serch-inp " (keyup)="serchMovie($event)" (blur)="hideserch()"
+                      placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
+                      <ul class="serch-movie" *ngIf="searchResult">
+                        <li *ngFor="let mov of searchResult.results">
+                            <a class=""> {{mov.name}} <img class="img-small-size" src="{{mov.poster}}" alt=""></a>
+                        </li>
+                    </ul>
                     <input type="hidden" name="data-chose" value="">
                     <h6 class=""><span>ALL</span> <i class="fa-solid carett fa-caret-down"></i></h6>
                     <ul class="Chose">
@@ -17,10 +24,11 @@
                         <li data-chos="TV shows">TV shows</li>
                         <li data-chos="Celebrities">Celebrities</li>
                     </ul>
-                    <button class="serch-btn">
+                    <button type='button' (click)="submitSerch(serchinput.value)" class="serch-btn">
                         <img src="../../assets/img/Search Icon.png" alt="">
                     </button>
                 </form>
+               
             </div>
             <div class="col">
                 <div class="login">

@@ -175,3 +175,30 @@ ul li {
 
     }
 }
+
+.serch-movie{
+    position: absolute;
+    z-index: 50;
+    top: 108px;
+    width: 569px;
+    max-width: 100%;
+    li {
+        background-color: grey;
+        padding: 10px;
+ cursor: pointer;
+        a{
+           
+            color: #fff;
+          
+        }
+    }
+}
+.serch-movie li:hover{
+    background-color: #8a8787;
+}
+.img-small-size {
+    height: 30px;
+    width: 30px;
+    float: right;
+    border-radius: 50%;
+}
