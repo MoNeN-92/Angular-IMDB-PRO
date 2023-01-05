@@ -1,6 +1,6 @@
 import { ActivatedRoute , Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ImdbserviceService } from '../imdbservice.service';
+import { ImdbserviceService } from '../service/imdbservice.service';
 
 @Component({
   selector: 'app-body',
@@ -11,8 +11,6 @@ export class BodyComponent implements OnInit {
 
   show = false;
 
-
- 
   MovielistData:any;
   SliderData:any;
   SerialsData:any;
@@ -23,28 +21,30 @@ export class BodyComponent implements OnInit {
     private Movielist:ImdbserviceService,
     private slider:ImdbserviceService,
     private activeRouter:ActivatedRoute,
-    private BackMoviePage:ImdbserviceService
+    private BackMoviePage:ImdbserviceService,
+    private items:ImdbserviceService,
 
   ) {
 
 
    }
 
-   id = this.activeRouter.snapshot.params['id']
+    id = this.activeRouter.snapshot.params['id']
 
    
   ngOnInit(): void {
 
-    // this.Serials.GetSeriesData().subscribe((SerData:any)=>{
-    //   this.SerialsData = SerData
-    //   // console.log(this.SerialsData.pagination.data);
+
+    this.slider.GetSliderData().subscribe((slidData:any)=>{
+      this.SerialsData = slidData
+      console.log(this.SerialsData.lists);
       
 
-    // })
+    })
     this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
       this.BackMoviePageData = ress
 
-          console.log(this.BackMoviePageData);
+          // console.log(this.BackMoviePageData.poster);
           
 
     })
@@ -74,5 +74,7 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
   RightClick(){
     this.carousel['left'] = (Number (this.carousel['left'].split ('%')[0]) - 20) +"%"
    };
+
+ 
 
 }

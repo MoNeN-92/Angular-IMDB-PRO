@@ -47,26 +47,27 @@
                     <h1 class="movie-name">{{BackMoviePageData.title.name}}
                         <span class="orang-text">({{BackMoviePageData.title.year}})</span>
                     </h1>
-                    <div class="summary">
-                        <span>SUMMARY</span>
-                        <p>{{BackMoviePageData.title.description}} </p>
+                    <div class="summary"*ngIf="BackMoviePageData.title.description">
+                        <span >SUMMARY</span>
+                        <p >{{BackMoviePageData.title.description}} </p>
                     </div>
                     <div class="detals">
                         <div class="row">
                             <div class="det">
                                 <h4>Details</h4>
-                                <p> <span class="grey-color">Release Date:</span>
+                                <p> <span *ngIf="BackMoviePageData.title.release_date " class="grey-color">Release Date:</span>
                                     {{BackMoviePageData.title.release_date | slice : 0 : 10}} </p>
 
                                 <p class="blue-color">
-                                    <span class="grey-color">type:</span> {{BackMoviePageData.title.type}}
+                                    <span *ngIf="BackMoviePageData.title.type" class="grey-color">type:</span> {{BackMoviePageData.title.type}}
                                 </p>
 
-                                <p class="blue-color"><span class="grey-color">Language:</span>
+                                <p class="blue-color"  *ngIf="BackMoviePageData.title.language"><span class="grey-color">Language:</span>
                                     {{BackMoviePageData.title.language}}</p>
-                                <p class="blue-color"><span class="grey-color">popularity:
+                                <p class="blue-color"><span *ngIf="BackMoviePageData.title.popularity" class="grey-color">popularity:
                                     </span>{{BackMoviePageData.title.popularity}}</p>
-                                <p><span class="grey-color">views:</span> {{BackMoviePageData.title.views}}</p>
+                                <p><span class="grey-color" *ngIf="BackMoviePageData.title.views">views:</span>
+                                     {{BackMoviePageData.title.views}}</p>
 
                             </div>
 
@@ -97,13 +98,13 @@
 
                     </div>
 
-                    <div class="director-writer-stars">
+                    <!-- <div class="director-writer-stars">
                        <div class="director">
                         <h4>director</h4>
                         <img src="" alt=""> <span></span>
                        </div>
 
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

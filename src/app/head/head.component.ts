@@ -1,6 +1,7 @@
 import { Component,  OnInit } from '@angular/core';
-import { ImdbserviceService } from '../imdbservice.service';
-import { Route, Router } from '@angular/router';
+import { ImdbserviceService } from '../service/imdbservice.service';
+import { ActivatedRoute , Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-head',
@@ -13,8 +14,10 @@ export class HeadComponent implements OnInit {
 
   constructor(
     private movies:ImdbserviceService,
-    private route:Router
+    private route:Router,
+    private activeRouter:ActivatedRoute
   ) { }
+   id = this.activeRouter.snapshot.params['id']
 
   ngOnInit(): void {
   }
@@ -26,7 +29,7 @@ if (query){
   this.movies.serchMovie(element.value).subscribe((res)=>{
  
      this.searchResult=res
-    //  console.log(this.searchResult.results);
+     console.log(this.searchResult.results);
      
   })
   
@@ -37,7 +40,7 @@ if (query){
   }
 
   submitSerch(val:any){
-    console.log(val);
+    // console.log(val);
     this.route.navigate([`serch-page/${val}`]);
     
   }

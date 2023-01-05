@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ImdbserviceService } from '../imdbservice.service';
+import { ImdbserviceService } from '../service/imdbservice.service';
 
 @Component({
   selector: 'app-movie-page',
@@ -23,7 +23,7 @@ export class MoviePageComponent implements OnInit {
   ) { }
 
  
-      id = this.activeRouter.snapshot.params['id'];
+      id = this.activeRouter.snapshot.paramMap.get('id');
 
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class MoviePageComponent implements OnInit {
  this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
           this.BackMoviePageData = ress
     
-              console.log(this.BackMoviePageData.title.locations);
+              console.log(this.BackMoviePageData.title);
               
     
         })

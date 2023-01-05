@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ImdbserviceService } from '../imdbservice.service';
+import { ImdbserviceService } from '../service/imdbservice.service';
 import { ActivatedRoute , Router} from '@angular/router';
-
+import { MatCarousel, MatCarouselComponent } from 'ng-mat-carousel';
 
 
 @Component({
@@ -20,6 +20,12 @@ export class SerchPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    let id = this.activeRoute.snapshot.paramMap.get('id');
+    console.warn(id);
+    
+
+
+
   let query = this.activeRoute.snapshot.paramMap.get('query');
 
   query && this.movie.serchMovie(query).subscribe((response)=>{

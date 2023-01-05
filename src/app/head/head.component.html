@@ -6,15 +6,16 @@
                 <a href=""> <img src="../../assets/img/imdb.png" alt=""></a>
                
             </div>
-
             <div class="col">
-                <!-- [routerLink]="'/serch-page/' + mov.id " -->
+               
                 <form action="" class="costum">
                     <input #serchinput class="serch-inp " (keyup)="serchMovie($event)" (blur)="hideserch()"
                       placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
                       <ul class="serch-movie" *ngIf="searchResult">
                         <li *ngFor="let mov of searchResult.results">
-                            <a class=""> {{mov.name}} <img class="img-small-size" src="{{mov.poster}}" alt=""></a>
+                            <a  [routerLink]="'/MoviePage/' + mov.id "   class=""> 
+                                 {{mov.name}} <img class="img-small-size" src="{{mov.poster}}" alt="">
+                                </a>
                         </li>
                     </ul>
                     <input type="hidden" name="data-chose" value="">

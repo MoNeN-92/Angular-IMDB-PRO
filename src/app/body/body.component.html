@@ -1,5 +1,11 @@
 <div class="container-fluid">
-    <div class="slider">
+
+    <!-- carusel start -->
+
+
+
+
+    <div class="slider" >
         <div class="slider-content">
             <div class="blur"></div>
             <img class="cover-img" src="../../assets/img/johnson.png" alt="">
@@ -78,7 +84,9 @@
 
             </div>
         </div>
-    </div>
+    </div> 
+
+    <!-- carusel end  -->
     <div class="container-fluid">
         <div class="container">
             <div class="on-tv">
@@ -403,7 +411,7 @@
                     <div class="cover-img">
                         <img src="../../assets/img/backcity.png" alt="">
                     </div>
-                    <div class="container ">
+                    <div class="container " *ngIf="BackMoviePageData">
                         <div class="com">
 
 
@@ -439,7 +447,7 @@
 
 
                     <div class="card-area">
-                        <button class="left-click position-a">
+                        <button class="left-click position-a" >
                             <i (click)="LeftClick()" class="fa-solid fa-chevron-left"></i>
                         </button>
 
@@ -447,7 +455,7 @@
                             <i (click)="RightClick()" class="fa-solid fa-chevron-right"></i>
                         </button>
                         <div class="container over-flow">
-                            <div class="carusel-items " [ngStyle]="carousel">
+                            <div class="carusel-items " [ngStyle]="carousel" >
 
                                 <div class="movie-card1">
                                     <div class="grid-items">
