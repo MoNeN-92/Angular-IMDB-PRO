@@ -124,7 +124,9 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
 
 
   nextSlide() {
-    if (this.currentSlide === this.slides.length - 1 ) {
+    
+    
+    if (this.currentSlide >= 4 ) {
       
    this.currentSlide = 0;
       
@@ -132,15 +134,26 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
       this.currentSlide++;
     }
 
+   console.log(this.currentSlide)
   
   }
   previousSlide() {
-    if (this.currentSlide > 5) {
-      this.currentSlide = this.slides.length - 0;
+    
+    
+    if (this.currentSlide >= 0  ) {
+      
+   this.currentSlide = 4 ;
+  
+
     } else {
       this.currentSlide--;
     }
+
+   console.log(this.currentSlide)
+  
   }
+
+
 }
 
 
