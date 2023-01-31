@@ -2,10 +2,56 @@
 
     <!-- carusel start -->
 
+<div class="container-fluid">
+<div class="carousel" >
+<div class="slide" *ngFor="let slide of slides.lists[0].items; let i = index"
+[ngClass]="{ active: i === currentSlide }">
+    <img src="{{slide.backdrop}}" alt="Slide Image">
+    <h3>{{ slide.title }}</h3>
+    <p>{{ slide.description }}</p>
+</div>
+
+</div>
+<button class="slider-btn btn-left"  (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="slider-btn btn-right"  (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+
+</div>
+
+
+<div class="d-none">
+    <div class="carousel">
+        <div class="slide"
+          *ngFor="let slide of slides.lists[0].items; let i = index"
+          [ngClass]="{ active: i === currentSlide }">
+          <img [src]="slide.backdrop" alt="Slide Image">
+          <h3>{{ slide.title }}</h3>
+          <p>{{ slide.description }}</p>
+        </div>
+      </div>
+      <button (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+      <button (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+
+    <!-- <div class="carousel">
+        <div class="slide" *ngFor="let slide of SliderData.lists[0].items; let i = index"
+             [@slideState]="getSlideState(i)"
+             [ngStyle]="{'background': 'url(' + slide.backdrop + ')'}">
+           
+          <img src="{{slide.poster}}" alt="">
+          <h2>{{slide.name}}</h2>
+          <p>{{ slide.description }}</p>
+          
+
+
+        </div>
+      </div>
+      <button (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+      <button (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button> -->
 
 
 
-    <div class="slider" >
+    <!-- <div class="slider">
         <div class="slider-content">
             <div class="blur"></div>
             <img class="cover-img" src="../../assets/img/johnson.png" alt="">
@@ -84,7 +130,7 @@
 
             </div>
         </div>
-    </div> 
+    </div> -->
 
     <!-- carusel end  -->
     <div class="container-fluid">
@@ -356,25 +402,25 @@
                 <div class="Bottom-line"></div>
                 <hr>
             </div>
-              
-                 <div class="movie-card">
 
-              
-                    <div class="card-body1" *ngFor="let movies of MovielistData.pagination.data">
-                        <a [routerLink]="'/MoviePage/' + movies.id ">
+            <div class="movie-card">
+
+
+                <div class="card-body1" *ngFor="let movies of MovielistData.pagination.data">
+                    <a [routerLink]="'/MoviePage/' + movies.id ">
 
                         <div class="position-r background-img ">
                             <img class="poster" src="{{movies.poster}}" alt="">
                             <img class="position-a play-icon" src="../../assets/img/Play Icon.png" alt="">
                         </div>
-                        <p class="Movie-Name">{{movies.name}}</p>
+                        <p class="Movie-Name">{{movies.name}} </p>
                         <p class="Movie-year">{{movies.year}}</p>
-                          </a>
-                    </div>
-               
+                    </a>
+                </div>
 
-                   </div>
-           
+
+            </div>
+
         </div>
 
     </section>
@@ -411,7 +457,7 @@
                     <div class="cover-img">
                         <img src="../../assets/img/backcity.png" alt="">
                     </div>
-                    <div class="container " *ngIf="BackMoviePageData">
+                    <div class="container ">
                         <div class="com">
 
 
@@ -447,7 +493,7 @@
 
 
                     <div class="card-area">
-                        <button class="left-click position-a" >
+                        <button class="left-click position-a">
                             <i (click)="LeftClick()" class="fa-solid fa-chevron-left"></i>
                         </button>
 
@@ -455,14 +501,15 @@
                             <i (click)="RightClick()" class="fa-solid fa-chevron-right"></i>
                         </button>
                         <div class="container over-flow">
-                            <div class="carusel-items " [ngStyle]="carousel" >
+                            <div class="carusel-items " [ngStyle]="carousel">
 
                                 <div class="movie-card1">
                                     <div class="grid-items">
-                                   
-                                            <div class="card-body2 card-body1"  *ngFor="let movie of MovielistData.pagination.data" >
 
-                                                <a [routerLink]="'/MoviePage/' + movie.id ">
+                                        <div class="card-body2 card-body1"
+                                            *ngFor="let movie of MovielistData.pagination.data">
+
+                                            <a [routerLink]="'/MoviePage/' + movie.id ">
                                                 <div class="position-r background-img ">
 
                                                     <img class="poster1" src="{{movie.poster}} " alt="">
@@ -473,10 +520,10 @@
                                                 </div>
                                                 <p class="Movie-Name-font ">{{movie.name}}</p>
                                                 <p class="Movie-Name-font">{{movie.year}}</p>
-                                                </a>
-                                            </div>
+                                            </a>
+                                        </div>
 
-                                       
+
                                     </div>
 
                                 </div>
@@ -492,4 +539,95 @@
             </div>
         </div>
 
+    </section>
+    <section class="Born">
+        <div class="container">
+
+
+            <div class="intheatr capital">
+                <h3 class="h3">born today</h3>
+                <div class="Bottom-line"></div>
+                <hr>
+            </div>
+
+
+            <div class="grid-containerr">
+                <div class="grid-itemm" *ngFor="let movlist of MovieStar.pagination.data">
+                    <img src="{{movlist.poster}}" alt="">
+                    <p>{{movlist.name}}</p>
+                    <p>{{movlist.birth_date }}</p>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="intheatr capital" >
+                <h3 class="h3">celebrity news</h3>
+                <div class="Bottom-line"></div>
+                <hr>
+            </div>
+                 <div>
+                    
+                 </div>
+            <div class="grid-containeri" >
+                <div class="grid-itemm-1  main-celebrity" *ngFor="let movlist of MovieStar.pagination.data"  >
+                    <div class="gr">
+                        <span class="birth-data">{{movlist.birth_date| slice : 5 : 20}}</span>
+                        <span class="star-name">{{movlist.name}}</span>
+                        <p class="star-about">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Distinctio vero modi in atque ducimus, 
+                            error ex accusantium amet ipsa dignissimos 
+                            sint placeat ipsum impedit dicta magni tempora 
+                            rerum esse quam repellat illo labore necessitatibus 
+                            ullam. Natus quo molestiae dolorum, esse odio deleniti,
+                             necessitatibus expedita dolore minus corporis harum at maxime!
+                            </p>
+<br>
+                            <br>
+                            <p class="star-about2 star-about">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                             Unde voluptatibus nobis cupiditate, explicabo illum quis. 
+                             Consectetur facere explicabo vitae alias! Dolor consectetur pariatur,
+                              est unde vitae excepturi molestiae eos quos et, alias quo. 
+                              Enim numquam adipisci aliquid minima eius in itaque illo vel, 
+                              nam eos id cum odit laudantium laboriosam fugit, 
+                              voluptatem impedit assumenda labore aperiam natus? Consequatur,
+                               quis? Velit architecto,
+                                numquam minus accusamus dolor pariatur quae enim sed dignissimos
+                                 laboriosam quidem facere asperiores dolores quasi illo repudiandae
+                                  excepturi blanditiis tenetur consequatur expedita adipisci eligendi ipsam. 
+                                  Voluptatem molestiae omnis ab iusto, suscipit totam cupiditate.
+                                   Nemo dolorem iusto dolore. Quis, eius.
+                                </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+    <section class="ads-fluid">
+        <div class="container-fluid">
+            <div class="adscolor">
+
+
+                <div class="container">
+                    <div class="ads">
+                        <img class="ads-img" src="../../assets/img/lexsus.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>

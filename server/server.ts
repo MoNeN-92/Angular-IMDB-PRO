@@ -12,7 +12,7 @@ server.post('/login', (req:any, res:any, next:any) => {
   const users = readUsers();
 
   const user = users.filter(
-    (u:any) => u.username === req.body.username && u.password === req.body.password
+    (u:any )=> u.username === req.body.username && u.password === req.body.password
   )[0];
 
   if (user) {
@@ -22,9 +22,9 @@ server.post('/login', (req:any, res:any, next:any) => {
   }
 });
 
-server.post('/register', (req:any, res:any, ) => {
+server.post('/register', (req:any, res:any) => {
   const users = readUsers();
-  const user = users.filter((u:any) => u.username === req.body.username)[0];
+  const user = users.filter((u:any ) => u.username === req.body.username)[0];
 
   if (user === undefined || user === null) {
     res.send({

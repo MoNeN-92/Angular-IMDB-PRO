@@ -1,0 +1,27 @@
+<div class="container-fluid bottom-border">
+<div class="container mt-100 mb-100">
+
+    <h1>Login to your account</h1>
+    <p>
+        In order to use the editing and rating capabilities of IMDb, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for 
+        an account is free and simple. <a routerLink="/reg-user"> <span class="color-carrot cursor-pointer">Click here </span></a>   to get started. 
+    </p>
+    <br>
+
+    <p>If you signed up but didn't get your verification email, <span class="color-carrot cursor-pointer">Click here </span> to have it resent.</p>
+
+    <form   #userLogin="ngForm" (ngSubmit)="logIn(userLogin.value)">
+<h3>username</h3>
+<input class="w-100" type="text" value=""   name="name" ngModel>
+<h3>password</h3>
+<input class="w-100" type="password" value=""   name="password" ngModel>
+
+<button class="btn sub-btn ">login</button>
+<a type="button"  class="cancel-a" >reset password</a>
+    </form>
+
+</div>
+
+
+
+</div>

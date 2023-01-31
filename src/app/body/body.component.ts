@@ -1,28 +1,49 @@
 import { ActivatedRoute , Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ImdbserviceService } from '../service/imdbservice.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  styleUrls: ['./body.component.scss'],
+  animations: [
+    trigger('slideState', [
+      state('previous', style({ transform: 'translateX(-100%)' })),
+      state('current', style({ transform: 'translateX(0)' })),
+      state('next', style({ transform: 'translateX(100%)' })),
+      transition('* => *', animate(500))
+    ])
+  ]
+  
 })
+
+
 export class BodyComponent implements OnInit {
+  slides:any = [      ];
+  currentSlide = 0;
+  
 
   show = false;
 
   MovielistData:any;
-  SliderData:any;
   SerialsData:any;
   BackMoviePageData:any
+  MovieStar:any
+  // nextSlide:any
+  // currentSlide:number
 
   constructor(
+    private http: HttpClient,
     private Serials:ImdbserviceService,
     private Movielist:ImdbserviceService,
     private slider:ImdbserviceService,
     private activeRouter:ActivatedRoute,
     private BackMoviePage:ImdbserviceService,
     private items:ImdbserviceService,
+    private stars:ImdbserviceService
+    
 
   ) {
 
@@ -34,10 +55,25 @@ export class BodyComponent implements OnInit {
    
   ngOnInit(): void {
 
+    // setInterval(() => {
+    //   this.nextSlide();
+    // }, 5000);
+    
+this.slider.GetSliderData().subscribe((res)=>{
+  this.slides = res
+  console.log(this.slides.lists[0].items);
+  
+})
+
+this.stars.MovieStars().subscribe((respo) =>{
+  this.MovieStar = respo
+  // console.log(this.MovieStar.pagination.data);
+  
+})
 
     this.slider.GetSliderData().subscribe((slidData:any)=>{
       this.SerialsData = slidData
-      console.log(this.SerialsData.lists);
+      // console.log(this.SerialsData.lists);
       
 
     })
@@ -76,5 +112,43 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
    };
 
  
+   getSlideState(index: number) {
+    if (index < this.currentSlide) {
+      return 'previous';
+    } else if (index === this.currentSlide) {
+      return 'current';
+    } else {
+      return 'next';
+    }
+  }
 
+
+  nextSlide() {
+    if (this.currentSlide === this.slides.length - 1 ) {
+      
+   this.currentSlide = 0;
+      
+    } else {
+      this.currentSlide++;
+    }
+
+  
+  }
+  previousSlide() {
+    if (this.currentSlide > 5) {
+      this.currentSlide = this.slides.length - 0;
+    } else {
+      this.currentSlide--;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+

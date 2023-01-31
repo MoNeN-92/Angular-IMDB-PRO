@@ -13,13 +13,13 @@
                       placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
                       <ul class="serch-movie" *ngIf="searchResult">
                         <li *ngFor="let mov of searchResult.results">
-                            <a  [routerLink]="'/MoviePage/' + mov.id "   class=""> 
+                            <!-- <a  [routerLink]="'/MoviePage/' + mov.id "   class="">  -->
                                  {{mov.name}} <img class="img-small-size" src="{{mov.poster}}" alt="">
-                                </a>
+                                <!-- </a> -->
                         </li>
                     </ul>
                     <input type="hidden" name="data-chose" value="">
-                    <h6 class=""><span>ALL</span> <i class="fa-solid carett fa-caret-down"></i></h6>
+                    <h6 class="chose-serch"><span>ALL</span> <i class="fa-solid carett fa-caret-down"></i></h6>
                     <ul class="Chose">
                         <li data-chos="Movies">Movies</li>
                         <li data-chos="TV shows">TV shows</li>
@@ -34,7 +34,15 @@
             <div class="col">
                 <div class="login">
                     <input type="hidden" name="data-author" value="">
-                    <h6 class="text-uppercase"><span>sign in</span> <i class="fa-solid carett fa-caret-down"></i></h6>
+                    <h6 class="text-uppercase">
+                         <a routerLink="login"><span class="cursor-pointer">sign in</span></a> 
+                          <i class="fa-solid carett fa-caret-down"></i>
+                        </h6>
+                        <ul class="Chose">
+                            <li data-chos="Movies">Watchlist</li>
+                            <li data-chos="TV shows">settings</li>
+                            <li data-chos="Celebrities">Logout</li>
+                        </ul>
                 </div>
             </div>
             <div class="col">

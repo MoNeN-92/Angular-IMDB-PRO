@@ -18,9 +18,9 @@ export class ImdbserviceService {
   GetMovieData(){
     return this.http.get('https://imdb.ge/secure/titles');
 }
-// GetSliderData(){
-//   return this.http.get('https://imdb.ge/secure/homepage/lists');
-// }
+GetSliderData(){
+  return this.http.get('https://imdb.ge/secure/homepage/lists');
+}
 // GetSeriesData(){
 //   return this.http.get('https://imdb.ge/secure/titles/');
 // }

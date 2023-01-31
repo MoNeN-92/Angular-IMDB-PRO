@@ -33,6 +33,11 @@ serchMovie(query:any){
   return this.http.get(`https://imdb.ge/secure/search/${query}`)
 }
 
+MovieStars(){
+  return this.http.get(`https://imdb.ge/secure/people?perPage=4&order=popularity:desc`)
+}
+
+
 
 
 }

@@ -1,0 +1,56 @@
+<div class="container-fluid bottom-border">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+<form   #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+                <h1>Sign up for an account</h1>
+
+                <p class="mb-50">Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is
+                    required to to
+                    continue.</p>
+
+
+                <h3>Username</h3>
+                <input class="w-100" type="text" name="name" ngModel>
+
+                <h3>Password (8 characters minimum)</h3>
+                <input class="w-100" type="password"  name="password" ngModel>
+                <h3>password confirm</h3>
+                <input class="w-100" type="password"  name="password" ngModel>
+                <h3>Email</h3>
+                <input class="w-100" type="email" name="email" ngModel>
+                <p>By clicking the "Sign up" button below, I certify that I have read and agree to the IMDb terms of use and privacy 
+                    policy.</p>
+                <button class="btn sub-btn ">sign up</button>
+                <a href="" class="cancel-a" >cancel</a>
+
+            </form>
+            </div>
+            <div class="col-5">
+                
+                <div class="box-benefits">
+<div class="benefits-top">
+    <h2>Benefits of being <br>
+        a member</h2>
+</div>
+<ul>
+    <li>Log the movies and TV shows you have watched</li>
+    <li>Keep track of your favourite movies and TV shows <br>
+        and get recommendations from them</li>
+    <li>Build and maintain a personal watchlist</li>
+    <li>Build custom mixed lists (movies and TV)</li>
+    <li>Take part in movie and TV discussions</li>
+    <li>Contribute to, and improve the information in our <br>
+        database</li>
+</ul>
+
+                </div>
+            
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -95,6 +95,14 @@ ul li {
                 }
             }
         }
+        .chose-serch{
+            cursor: pointer;
+            span {
+                color: #acacac;
+                font-size: 12px!important;
+                font-family: anyconv;
+            }
+        }
 
         .login {
             height: 33px;
@@ -175,6 +183,9 @@ ul li {
 
     }
 }
+.cursor-pointer{
+cursor: pointer;
+}
 
 .serch-movie{
     position: absolute;
@@ -183,19 +194,22 @@ ul li {
     width: 569px;
     max-width: 100%;
     li {
-        background-color: grey;
+        background-color: #fff;
         padding: 10px;
  cursor: pointer;
         a{
            
-            color: #fff;
+            color: #707070;
           
         }
     }
 }
 .serch-movie li:hover{
-    background-color: #8a8787;
+    background-color: #2a2a2a;
+    color: #ffffff;
+
 }
+
 .img-small-size {
     height: 30px;
     width: 30px;

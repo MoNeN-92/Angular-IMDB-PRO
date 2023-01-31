@@ -4,7 +4,7 @@
 }
 
 .slider-content {
-   .cover-img{
+    .cover-img {
         position: relative;
         width: 1920px;
         max-width: 100%;
@@ -13,7 +13,7 @@
     }
 
     .blur {
-        top: 123px;
+        top: 128px;
         position: absolute;
         z-index: 1;
         opacity: 0.800;
@@ -23,11 +23,13 @@
         background-image: linear-gradient(43deg, #452d21 0%, #4f5739 100%);
     }
 }
-.container-fluid{
+
+.container-fluid {
     width: 1920px;
     max-width: 100%;
     margin: auto;
 }
+
 .container {
     width: 1140px;
     max-width: 100%;
@@ -43,11 +45,13 @@
 
         }
     }
-    .card-right-img{
+
+    .card-right-img {
         margin-left: 35%;
-       margin-top: 38px;
-    
-        }
+        margin-top: 38px;
+
+    }
+
     .card-body {
         position: absolute;
         top: 155px;
@@ -57,31 +61,32 @@
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 50px;
- 
-    
+
+
         .wach-list {
 
-       margin-top: 125px;
-          
-button:first-child{
-    margin-right: 20px;
-}
-            
+            margin-top: 125px;
 
-                .trailer {
-                    background-color: #ffffff;
-                    width: 200px;
-                    height: 50px;
-                    border-radius: 3px;
-                    border: none;
-                    font-family: myral;
-                    font-size: 14px;
-                    font-weight: bold;
-                }
-                .trailer:hover{
-                    background-color: #e1af12
-                }
-            
+            button:first-child {
+                margin-right: 20px;
+            }
+
+
+            .trailer {
+                background-color: #ffffff;
+                width: 200px;
+                height: 50px;
+                border-radius: 3px;
+                border: none;
+                font-family: myral;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .trailer:hover {
+                background-color: #e1af12
+            }
+
         }
 
         .stars-actor {
@@ -102,7 +107,7 @@ button:first-child{
                 align-items: center;
                 justify-content: center;
                 margin-left: 10px;
-            
+
 
                 span {
                     margin-left: 3px;
@@ -113,15 +118,17 @@ button:first-child{
                 }
 
             }
-            .more-btn:hover{
-                  
+
+            .more-btn:hover {
+
                 background-color: #e1af12;
 
 
             }
-            .more-btn:focus{
-                  
-                   box-shadow: 1px 1px 6px 2px #e1af12;
+
+            .more-btn:focus {
+
+                box-shadow: 1px 1px 6px 2px #e1af12;
 
             }
 
@@ -228,6 +235,7 @@ button:first-child{
         }
     }
 }
+
 .container-fluid {
     width: 1920px;
     max-width: 100%;
@@ -478,10 +486,12 @@ a {
 .teatr-item5 .img:hover {
     filter: blur(4px);
 }
-.ads-img{
+
+.ads-img {
     width: 100%;
     max-width: 100%;
 }
+
 .ads-fluid {
     margin-bottom: 20px;
     margin-top: 30px;
@@ -498,7 +508,7 @@ a {
 
     .card-body1 {
         border: 1px solid transparent;
-       
+
 
         .Movie-year {
             opacity: 0.800;
@@ -524,6 +534,7 @@ a {
                 width: 206px;
                 max-width: 100%;
             }
+
             .poster1 {
                 width: 206px;
                 max-width: 100%;
@@ -535,7 +546,7 @@ a {
 }
 
 .card-body1:hover {
- 
+
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
     background-color: #fdfdfd;
     transform: scale(1.01);
@@ -552,14 +563,14 @@ a {
     overflow: visible !important;
     height: auto !important;
     transition: all 0.3;
-    
+
 }
 
 .hide {
     height: 877px;
     overflow: hidden;
     transition: all 0.3;
-    
+
 }
 
 .show-more-center {
@@ -586,24 +597,26 @@ a {
 }
 
 .container-fluid {
-    .coming-img-content{
+    .coming-img-content {
         z-index: 11;
         position: absolute;
         top: 15%;
         z-index: 11;
         right: 0px;
     }
+
     .coming-body-content {
-     
+
         z-index: 11;
         position: absolute;
         top: 15%;
         z-index: 11;
-  
+
 
         .rating-stars {
             width: 50%;
             padding-right: 15px;
+
             .more-info {
                 font-size: 12px;
                 color: #ec7632;
@@ -650,49 +663,58 @@ a {
         width: 100%;
         background-color: #101010;
         bottom: 0px;
-        .right-click{
+
+        .right-click {
             right: 10%;
             top: 50%;
             font-size: 23px;
             cursor: pointer;
             background-color: transparent;
             border: none;
-            i{
+
+            i {
                 color: #fff;
             }
-            i:hover{
+
+            i:hover {
                 transform: scale(1.1);
             }
         }
-        .left-click{
+
+        .left-click {
             left: 10%;
             top: 50%;
             font-size: 23px;
             cursor: pointer;
             background-color: transparent;
             border: none;
-            i{
+
+            i {
                 color: #fff;
             }
-            i:hover{
+
+            i:hover {
                 transform: scale(1.1);
             }
         }
-     
+
     }
 }
-.Movie-Name-font{
+
+.Movie-Name-font {
     font-size: 14px;
-    color: #222222!important;
+    color: #222222 !important;
     font-weight: bold;
     font-family: "Panton Mtav3";
     text-align: center;
     margin-top: 5px;
 }
-.card-body2{
-    padding: 11px!important;
-    border-radius: 3px!important;
+
+.card-body2 {
+    padding: 11px !important;
+    border-radius: 3px !important;
 }
+
 .card-body2:hover {
     border-radius: 5px;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
@@ -700,57 +722,238 @@ a {
     transform: scale(1.01);
     cursor: pointer;
     margin-bottom: 7px;
-    .Movie-Name-font{
-        color: #ffffff!important;
+
+    .Movie-Name-font {
+        color: #ffffff !important;
     }
 }
+
 .card-body2:hover .play-icon {
     display: block;
     top: 35%;
     left: 40%;
 }
-.over-flow{
+
+.over-flow {
     overflow: hidden;
 }
-.carusel-items{
+
+.carusel-items {
     margin-top: 12.5px;
     transition: all 0.6s;
     position: relative;
- 
 
 
-.movie-card1{
- 
-    .grid-items{
-        display: grid;
-        grid-template-columns: repeat(16, 20%);
-        justify-items: center;
-    }
-    .poster1 {
-        height: 300px;
-        width: 206px;
-    }
-    .card-body1 {
-        border: 1px solid transparent;
-        border-radius: 5px;
-        margin-bottom: 7px;
 
-        .Movie-year {
-            opacity: 0.800;
-            font-size: 14px;
-            color: #171717;
-            font-family: "Panton Mtav3";
-            text-align: center;
+    .movie-card1 {
+
+        .grid-items {
+            display: grid;
+            grid-template-columns: repeat(16, 20%);
+            justify-items: center;
         }
 
-        .Movie-Name {
-            opacity: 0.800;
-            font-size: 14px;
-            color: #171717;
-            font-weight: bold;
-            font-family: "Panton Mtav3";
-            text-align: center;
+        .poster1 {
+            height: 300px;
+            width: 206px;
         }
+
+        .card-body1 {
+            border: 1px solid transparent;
+            border-radius: 5px;
+            margin-bottom: 7px;
+
+            .Movie-year {
+                opacity: 0.800;
+                font-size: 14px;
+                color: #171717;
+                font-family: "Panton Mtav3";
+                text-align: center;
+            }
+
+            .Movie-Name {
+                opacity: 0.800;
+                font-size: 14px;
+                color: #171717;
+                font-weight: bold;
+                font-family: "Panton Mtav3";
+                text-align: center;
+            }
+        }
+    }
 }
-}}
 
+.capital {
+    h3 {
+        text-transform: capitalize;
+    }
+}
+
+.Born {
+    background-color: #f2f2f2;
+
+
+
+}
+
+.grid-containerr {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 10px;
+    padding-right: 30px;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    p:nth-child(3) {
+        color: #e1af12;
+
+    }
+
+    .grid-itemm {
+        margin-top: 18px;
+        background-color: #ffffff;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+
+
+}
+
+.grid-containeri {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 15px;
+    padding-top: 18px;
+    padding-bottom: 30px;
+
+
+    .star-name {
+        font-size: 14px;
+        color: #4b4b4b;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+
+    .main-celebrity {
+        padding: 30px;
+        padding-right: 0px;
+        background-color: #ffffff;
+
+        .birth-data {
+            background-color: #ececec;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #191919;
+            font-weight: bold;
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+
+        .star-about {
+            opacity: 0.702;
+            font-size: 12px;
+            color: #4b4b4b;
+            margin-top: 35px;
+        }
+
+    }
+
+}
+
+.grid-itemm-1:nth-child(1) {
+    grid-row: span 2;
+
+}
+
+
+.grid-containeri div:nth-child(2) {
+    grid-column: span 1;
+
+    .star-about2 {
+        display: none;
+    }
+
+}
+
+.grid-containeri div:nth-child(3) {
+    grid-row: span 1;
+
+    .star-about2 {
+        display: none;
+    }
+}
+
+.grid-containeri div:nth-child(4) {
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+
+
+  }
+
+.d-none{
+    display: none;
+}
+
+.slide {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-shrink: 0;
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img{
+        width: 100%;
+    }
+
+  
+}
+
+.slide.active {
+    opacity: 1;
+    width: 100%;
+}
+
+.slide:not(.active) {
+    opacity: 0;
+    width: 0%;
+}
+.slider-btn{
+    position: absolute;
+    z-index: 20;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 80px;
+    border: none;
+    cursor: pointer;
+}
+.slider-btn:hover{
+    color: rgb(90, 88, 88);
+}
+.btn-right {
+    right: 0;
+    top: 470px;
+    
+}
+.btn-left{
+    top: 470px;
+}

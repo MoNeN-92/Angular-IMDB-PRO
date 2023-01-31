@@ -4,6 +4,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
 import { BodyComponent } from './body/body.component';
 import { HeaderComponent } from './header/header.component';
 import { SerchPageComponent } from './serch-page/serch-page.component';
+import { RegUserComponent } from './reg-user/reg-user.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -25,6 +27,14 @@ const routes: Routes = [
 {
   path:'serch-page/:query',
   component:SerchPageComponent
+},
+{
+  path:'login',
+  component:LoginComponent
+},
+{
+  path:'reg-user',
+  component:RegUserComponent
 }
 
 

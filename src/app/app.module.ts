@@ -17,6 +17,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { MatCarouselModule } from 'ng-mat-carousel';
+import { RegUserComponent } from './reg-user/reg-user.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MatCarouselModule } from 'ng-mat-carousel';
     BodyComponent,
     MoviePageComponent,
     SerchPageComponent,
+    RegUserComponent,
+    LoginComponent,
   
     
     
