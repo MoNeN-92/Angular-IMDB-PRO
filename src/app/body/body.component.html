@@ -2,135 +2,96 @@
 
     <!-- carusel start -->
 
-<div class="container-fluid">
-<div class="carousel" >
-<div class="slide" *ngFor="let slide of slides.lists[0].items; let i = index"
-[ngClass]="{ active: i === currentSlide }">
-    <img src="{{slide.backdrop}}" alt="Slide Image">
-    <h3>{{ slide.title }}</h3>
-    <p>{{ slide.description }}</p>
-</div>
+    <div class="container-fluid ">
+        <div class="blur"></div>
+        <div class="carousel">
 
-</div>
-<button class="slider-btn btn-left"  (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-<button class="slider-btn btn-right"  (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
-
-</div>
+            <div class="slide" *ngFor="let slide of slides.lists[1].items; let i = index"
+                [ngClass]="{ active: i === currentSlide }">
+                <div class="slid-cover">
+                    <img class="slide-img" src="{{slide.backdrop}}" alt="Slide Image">
 
 
-<div class="d-none">
-    <div class="carousel">
-        <div class="slide"
-          *ngFor="let slide of slides.lists[0].items; let i = index"
-          [ngClass]="{ active: i === currentSlide }">
-          <img [src]="slide.backdrop" alt="Slide Image">
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.description }}</p>
-        </div>
-      </div>
-      <button (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-      <button (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
-</div>
+                </div>
+                <div class="container">
+                    
+                        <div class="row">
+                            <div class="card-body">
+                                <div class="card-left-con">
+                                    <h2 class="card-title">{{slide.name}} <span>{{slide.year}}</span></h2>
+                                    <div class="movie-info">
+                                        <p class="rating-border">5.9</p>
+                                        <div class="movinf">
+                                            <p>Ratings: <span>{{slide.rating}}</span>/10 from <span>137,182 users</span>
+                                                &nbsp;
+                                                Metascore:<span> 89</span>/100</p>
+
+                                            <p>Reviews:<span>697 user</span> <span> 502 critic</span> &nbsp;
+                                                <span>46</span>from
+                                                <span> Metacritic.com</span>
+                                            </p>
 
 
-    <!-- <div class="carousel">
-        <div class="slide" *ngFor="let slide of SliderData.lists[0].items; let i = index"
-             [@slideState]="getSlideState(i)"
-             [ngStyle]="{'background': 'url(' + slide.backdrop + ')'}">
-           
-          <img src="{{slide.poster}}" alt="">
-          <h2>{{slide.name}}</h2>
-          <p>{{ slide.description }}</p>
-          
+                                        </div>
+
+                                    </div>
+                                    <div class="mov-subtitle">
+                                        <h3 *ngIf="slide.description">summary</h3>
+                                        <p>{{slide.description}}</p>
+                                    </div>
+                                    <div class="director-writer">
+                                        <p>Director:<span>Rawson Marshall Thurber </span> &nbsp; &nbsp; Writer:
+                                            <span>Rawson
+                                                Marshall Thurber</span></p>
+                                    </div>
+                                    <div class="stars-actor">
+                                        <p>Stars: </p>
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/dr strange.jfif" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <img src="../../assets/img/portrat duain.jpg" alt="">
+                                        <button class="more-btn">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                    <div class="wach-list">
+                                        <button class="trailer">+ &nbsp; &nbsp; Wacht List</button>
+                                        <button class="trailer"> <i class="fa-solid carett fa-caret-right"></i> &nbsp;
+                                            &nbsp;
+                                            Wacht
+                                            Trailer</button>
+                                    </div>
+                                </div>
 
 
-        </div>
-      </div>
-      <button (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-      <button (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button> -->
 
 
 
-    <!-- <div class="slider">
-        <div class="slider-content">
-            <div class="blur"></div>
-            <img class="cover-img" src="../../assets/img/johnson.png" alt="">
-            <div class="container">
-                <div class="row">
-                    <div class="card-body">
-                        <div class="">
-                            <h2 class="card-title">SKYSCRAPER <span>(2018)</span></h2>
-                            <div class="movie-info">
-                                <p class="rating-border">5.9</p>
-                                <div class="movinf">
-                                    <p>Ratings: <span>5.9</span>/10 from <span>137,182 users</span> &nbsp;
-                                        Metascore:<span> 89</span>/100</p>
 
-                                    <p>Reviews:<span>697 user</span> <span> 502 critic</span> &nbsp; <span>46</span>from
-                                        <span> Metacritic.com</span>
-                                    </p>
+
+                                <div class="card-right-img">
+                                    <a [routerLink]="'/MoviePage/' + slide.id "> <img src="{{slide.poster}}" alt=""></a>
 
 
                                 </div>
-
-                            </div>
-                            <div class="mov-subtitle">
-                                <h3>summary</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum optio nihil quasi,
-                                    sint inventore ex <br> assumenda, natus deserunt odio fugiat labore officia
-                                    distincti
-                                    aspernatur alias officiis mollitia! Ab, aut?<br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum optio nihil
-                                    quasi,
-                                    sint inventore <br> ex assumenda, natus deserunt odio fugiat labore officia
-                                    distinctio
-
-                                    aspernatur alias officiis mollitia! Ab, aut?</p>
-                            </div>
-                            <div class="director-writer">
-                                <p>Director:<span>Rawson Marshall Thurber </span> &nbsp; &nbsp; Writer: <span>Rawson
-                                        Marshall Thurber</span></p>
-                            </div>
-                            <div class="stars-actor">
-                                <p>Stars: </p>
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <img src="../../assets/img/portrat duain.jpg" alt="">
-                                <button class="more-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                            <div class="wach-list">
-                                <button class="trailer">+ &nbsp; &nbsp; Wacht List</button>
-                                <button class="trailer"> <i class="fa-solid carett fa-caret-right"></i> &nbsp; &nbsp;
-                                    Wacht
-                                    Trailer</button>
                             </div>
                         </div>
+                    
 
-
-
-
-
-
-
-                        <div class="card-right-img">
-                            <img src="../../assets/img/dwayne jhson sky.png" alt="">
-
-                        </div>
-                    </div>
                 </div>
-
             </div>
+
         </div>
-    </div> -->
+        <button class="slider-btn btn-left" (click)="previousSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn btn-right" (click)="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+
+    </div>
 
     <!-- carusel end  -->
     <div class="container-fluid">
@@ -457,7 +418,7 @@
                     <div class="cover-img">
                         <img src="../../assets/img/backcity.png" alt="">
                     </div>
-                    <div class="container ">
+                    <div class="container" *ngIf="selectedMovie">
                         <div class="com">
 
 
@@ -469,26 +430,25 @@
 
                         </div>
                         <div class="coming-body-content">
-                            <h1 class="movie-name"></h1>
+                            <h1 class="movie-name">{{selectedMovie.name}}</h1>
                             <div class="rating-stars">
                                 <img src="../../assets/img/Rating Icons stars.png" alt="">
-                                <span class="relase-data">07 September, 2018</span>
+                                <span class="relase-data">{{selectedMovie.release_date | slice : 0 : 10}}</span>
                                 <div class="about-movie">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing
-                                        elit. Hic rem ipsam fugiat aliquam, dolorem repellat
-                                        corrupti itaque, sit, officiis similique labore qui.
-                                        Earum animi doloribus maiores delectus et quasi
-                                        suscipit.</p>
+                                    <p>{{selectedMovie.description}}</p>
 
                                 </div>
-                                <a href="" class="more-info"> MORE INFO ></a>
+                                <a *ngIf="selectedMovie.description" href="" class="more-info"> MORE INFO ></a>
                             </div>
+
+
+                        </div>
+                        <a [routerLink]="'/MoviePage/' + selectedMovie.id ">
 
                             <div class="coming-img-content">
-                                <img src="../../assets/img/cate.png" alt="">
+                                <img src="{{selectedMovie.backdrop}}" alt="">
                             </div>
-                        </div>
-
+                        </a>
                     </div>
 
 
@@ -509,18 +469,18 @@
                                         <div class="card-body2 card-body1"
                                             *ngFor="let movie of MovielistData.pagination.data">
 
-                                            <a [routerLink]="'/MoviePage/' + movie.id ">
-                                                <div class="position-r background-img ">
+                                            <div class="position-r background-img " class="movie-card"
+                                                (click)="setSelectedMovie(movie)">
 
-                                                    <img class="poster1" src="{{movie.poster}} " alt="">
+                                                <img class="poster1" src="{{movie.poster}} " alt="">
 
-                                                    <img class="position-a play-icon"
-                                                        src="../../assets/img/Play Icon.png" alt="">
+                                                <img class="position-a play-icon" src="../../assets/img/Play Icon.png"
+                                                    alt="">
 
-                                                </div>
-                                                <p class="Movie-Name-font ">{{movie.name}}</p>
-                                                <p class="Movie-Name-font">{{movie.year}}</p>
-                                            </a>
+                                            </div>
+                                            <p class="Movie-Name-font ">{{movie.name}}</p>
+                                            <p class="Movie-Name-font">{{movie.year}}</p>
+
                                         </div>
 
 
@@ -564,45 +524,45 @@
 
 
 
-            <div class="intheatr capital" >
+            <div class="intheatr capital">
                 <h3 class="h3">celebrity news</h3>
                 <div class="Bottom-line"></div>
                 <hr>
             </div>
-                 <div>
-                    
-                 </div>
-            <div class="grid-containeri" >
-                <div class="grid-itemm-1  main-celebrity" *ngFor="let movlist of MovieStar.pagination.data"  >
+            <div>
+
+            </div>
+            <div class="grid-containeri">
+                <div class="grid-itemm-1  main-celebrity" *ngFor="let movlist of MovieStar.pagination.data">
                     <div class="gr">
                         <span class="birth-data">{{movlist.birth_date| slice : 5 : 20}}</span>
                         <span class="star-name">{{movlist.name}}</span>
                         <p class="star-about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Distinctio vero modi in atque ducimus, 
-                            error ex accusantium amet ipsa dignissimos 
-                            sint placeat ipsum impedit dicta magni tempora 
-                            rerum esse quam repellat illo labore necessitatibus 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Distinctio vero modi in atque ducimus,
+                            error ex accusantium amet ipsa dignissimos
+                            sint placeat ipsum impedit dicta magni tempora
+                            rerum esse quam repellat illo labore necessitatibus
                             ullam. Natus quo molestiae dolorum, esse odio deleniti,
-                             necessitatibus expedita dolore minus corporis harum at maxime!
-                            </p>
-<br>
-                            <br>
-                            <p class="star-about2 star-about">
+                            necessitatibus expedita dolore minus corporis harum at maxime!
+                        </p>
+                        <br>
+                        <br>
+                        <p class="star-about2 star-about">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                             Unde voluptatibus nobis cupiditate, explicabo illum quis. 
-                             Consectetur facere explicabo vitae alias! Dolor consectetur pariatur,
-                              est unde vitae excepturi molestiae eos quos et, alias quo. 
-                              Enim numquam adipisci aliquid minima eius in itaque illo vel, 
-                              nam eos id cum odit laudantium laboriosam fugit, 
-                              voluptatem impedit assumenda labore aperiam natus? Consequatur,
-                               quis? Velit architecto,
-                                numquam minus accusamus dolor pariatur quae enim sed dignissimos
-                                 laboriosam quidem facere asperiores dolores quasi illo repudiandae
-                                  excepturi blanditiis tenetur consequatur expedita adipisci eligendi ipsam. 
-                                  Voluptatem molestiae omnis ab iusto, suscipit totam cupiditate.
-                                   Nemo dolorem iusto dolore. Quis, eius.
-                                </p>
+                            Unde voluptatibus nobis cupiditate, explicabo illum quis.
+                            Consectetur facere explicabo vitae alias! Dolor consectetur pariatur,
+                            est unde vitae excepturi molestiae eos quos et, alias quo.
+                            Enim numquam adipisci aliquid minima eius in itaque illo vel,
+                            nam eos id cum odit laudantium laboriosam fugit,
+                            voluptatem impedit assumenda labore aperiam natus? Consequatur,
+                            quis? Velit architecto,
+                            numquam minus accusamus dolor pariatur quae enim sed dignissimos
+                            laboriosam quidem facere asperiores dolores quasi illo repudiandae
+                            excepturi blanditiis tenetur consequatur expedita adipisci eligendi ipsam.
+                            Voluptatem molestiae omnis ab iusto, suscipit totam cupiditate.
+                            Nemo dolorem iusto dolore. Quis, eius.
+                        </p>
 
                     </div>
                 </div>

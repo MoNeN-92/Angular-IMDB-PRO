@@ -23,6 +23,9 @@ import { HttpClient } from '@angular/common/http';
 export class BodyComponent implements OnInit {
   slides:any = [      ];
   currentSlide = 0;
+  movies:any = [   ];
+  selectedMovie:any;
+
   
 
   show = false;
@@ -84,6 +87,13 @@ this.stars.MovieStars().subscribe((respo) =>{
           
 
     })
+    this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
+          this.BackMoviePageData = ress
+    
+              console.log(this.BackMoviePageData.title);
+              
+    
+        })
 
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
@@ -123,36 +133,25 @@ this.Movielist.GetMovieData().subscribe((res:any)=> {
   }
 
 
-  nextSlide() {
-    
-    
-    if (this.currentSlide >= 4 ) {
-      
-   this.currentSlide = 0;
-      
-    } else {
-      this.currentSlide++;
-    }
-
-   console.log(this.currentSlide)
   
+  setSelectedMovie(movie:any) {
+    this.selectedMovie = movie;
   }
-  previousSlide() {
-    
-    
-    if (this.currentSlide >= 0  ) {
-      
-   this.currentSlide = 4 ;
-  
 
+
+
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % 5;
+  }
+  
+  previousSlide() {
+    if (this.currentSlide === 0) {
+      this.currentSlide = 4;
     } else {
       this.currentSlide--;
     }
-
-   console.log(this.currentSlide)
-  
   }
-
 
 }
 
