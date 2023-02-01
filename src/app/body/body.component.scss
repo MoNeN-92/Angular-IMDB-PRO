@@ -55,9 +55,10 @@
     width: 48%;
     position: absolute;
     top: 155px;
+    max-width: 100%;
 }
     .card-right-img {
-        width: 48%;
+        width: 53%;
         position: absolute;
         top: 155px;
         right: 0;
@@ -66,6 +67,8 @@
             height: 600px;
             margin: auto;
             display: block;
+            max-width: 100%;
+
         }
         
 
