@@ -8,7 +8,6 @@ export class ImdbserviceService {
 
 
 
-
   constructor(
     private  http: HttpClient,
 
@@ -21,9 +20,9 @@ export class ImdbserviceService {
 GetSliderData(){
   return this.http.get('https://imdb.ge/secure/homepage/lists');
 }
-// GetSeriesData(){
-//   return this.http.get('https://imdb.ge/secure/titles/');
-// }
+GetSeriesData(){
+  return this.http.get('https://imdb.ge/secure/titles?type=series&onlyStreamable=false&page=1&perPage=16');
+}
 
 BackMoviePage(id:any){
   return  this.http.get(`https://imdb.ge/secure/titles/${id}`);

@@ -15,10 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
-
 import { MatCarouselModule } from 'ng-mat-carousel';
 import { RegUserComponent } from './reg-user/reg-user.component';
 import { LoginComponent } from './login/login.component';
+import { FilterPipe } from './filter.pipe';
+import { FilterBornTodayPipe } from './filter-born-today.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import { LoginComponent } from './login/login.component';
     SerchPageComponent,
     RegUserComponent,
     LoginComponent,
+    FilterPipe,
+    FilterBornTodayPipe,
   
     
     

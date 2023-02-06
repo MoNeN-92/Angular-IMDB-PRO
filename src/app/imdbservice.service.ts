@@ -10,28 +10,28 @@ export class ImdbserviceService {
 
 
   constructor(
-    private  http: HttpClient,
+    private http:HttpClient) { }
 
-    
-  ) { }
+GetSerialList(){
+  return this.http.get('https://imdb.ge/secure/titles?type=series&onlyStreamable=false&page=1&perPage=16')
 
-  GetMovieData(){
+};
+
+  GetMovieData() {
     return this.http.get('https://imdb.ge/secure/titles');
-}
-GetSliderData(){
-  return this.http.get('https://imdb.ge/secure/homepage/lists');
-}
-// GetSeriesData(){
-//   return this.http.get('https://imdb.ge/secure/titles/');
-// }
+    
+  };
+  GetSliderData() {
+    return this.http.get('https://imdb.ge/secure/homepage/lists');
+  };
 
-BackMoviePage(id:any){
-  return this.http.get(`https://imdb.ge/secure/titles/${id}`);
-}
+  BackMoviePage(id: any) {
+    return this.http.get(`https://imdb.ge/secure/titles/${id}`);
+  };
 
-serchMovie(query:any){
-  return this.http.get(`https://imdb.ge/secure/search/${query}`)
-}
+  serchMovie(query: any) {
+    return this.http.get(`https://imdb.ge/secure/search/${query}`)
+  };
 
 
 

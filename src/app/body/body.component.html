@@ -422,7 +422,7 @@
                         <div class="com">
 
 
-                            <div class="intheatr ">
+                            <div class="intheatr color-coming-soon-title">
                                 <h3 class="h3">Coming Soon</h3>
                                 <div class="Bottom-line"></div>
                                 <hr>
@@ -512,9 +512,9 @@
 
 
             <div class="grid-containerr">
-                <div class="grid-itemm" *ngFor="let movlist of MovieStar.pagination.data">
+                <div class="grid-itemm" *ngFor="let movlist of MovieStar.pagination.data   ">
                     <img src="{{movlist.poster}}" alt="">
-                    <p>{{movlist.name}}</p>
+                    <p>{{movlist.name }}</p>
                     <p>{{movlist.birth_date }}</p>
                 </div>
 
@@ -591,3 +591,35 @@
             </div>
         </div>
     </section>
+
+
+    <!-- last content start -->
+
+
+    <section>
+<div class="container">
+    <div class="capital serials-tvshows">
+        <button>
+            <h3 class="h3 seri" >Popular Serials</h3>
+
+        </button>
+        <button>
+            <h3 class="h3 tvshow">Popular TV Shows</h3>  
+        </button>
+      
+    </div>
+    <div class="Bottom-linee w127"></div>
+    <hr class="hrrh">
+    <div class="grid-container-last" >
+        <div class="grid-items-last" *ngFor="let movie of SerialsData.pagination.data ">
+            <img  src="{{movie.backdrop }}" alt="">
+            <p>{{movie.name}} ({{movie.year}})</p>
+        </div>
+
+    </div>
+
+</div>
+
+    </section>
+
+        <!-- last content end -->

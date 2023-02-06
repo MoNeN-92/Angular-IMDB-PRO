@@ -79,7 +79,6 @@
         // top: 155px;
         z-index: 1;
         max-width: 100%;
-        gap: 20;
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 50px;
@@ -294,7 +293,11 @@ ul li {
 a {
     text-decoration: none;
 }
-
+.Bottom-linee {
+    width: 70px;
+    height: 3px;
+    background-image: linear-gradient(-90deg, #eb7531 0%, #e1af11 100%);
+}
 .container-fluid {
     background-color: #ffffff;
 
@@ -399,6 +402,12 @@ a {
 
 }
 
+.color-coming-soon-title{
+    h3{
+        color: #ffffff!important;
+    }
+}
+
 .intheatr {
     padding-top: 30px;
     font-size: 18px;
@@ -409,7 +418,7 @@ a {
     .h3 {
         margin-top: 15px;
         margin-bottom: 8px !important;
-        color: #ffffff;
+        color: #171717;
     }
 
     .Bottom-line {
@@ -634,6 +643,7 @@ a {
         z-index: 11;
         right: 190px;
         img{
+            border-radius: 5px;
             width: 500px;
             height: 300px;
         }
@@ -1028,4 +1038,58 @@ img{
     background-color: green;
     left: 0;
 
+}
+
+.serials-tvshows{
+display: flex;
+.tvshow{
+    margin-left: 25px;
+    
+}
+h3{
+    cursor: pointer;
+    color: #a1a1a1;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+button:focus{
+    h3{
+           color: #171717!important; 
+ 
+    }
+
+}
+
+}
+.w127{
+    width: 127px!important;
+}
+.hrrh{
+    margin: 0;
+}
+.grid-container-last{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 3.5px;
+    margin-top: 18px;
+    .grid-items-last{
+        p{
+            text-align: center;
+            margin: 5px 0px 5px 0px;
+            
+        }
+        img{
+            width: 280px;
+            height: 160px;
+
+        }
+    }
+
+}
+.grid-items-last:nth-child(2n+2){
+display: none;
 }
