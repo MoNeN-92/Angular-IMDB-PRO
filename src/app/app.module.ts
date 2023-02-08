@@ -20,6 +20,10 @@ import { RegUserComponent } from './reg-user/reg-user.component';
 import { LoginComponent } from './login/login.component';
 import { FilterPipe } from './filter.pipe';
 import { FilterBornTodayPipe } from './filter-born-today.pipe';
+import { PopularSeriesComponent } from './popular-series/popular-series.component';
+import { PopularTvShowComponent } from './popular-tv-show/popular-tv-show.component';
+
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { FilterBornTodayPipe } from './filter-born-today.pipe';
     LoginComponent,
     FilterPipe,
     FilterBornTodayPipe,
+    PopularSeriesComponent,
+    PopularTvShowComponent,
   
     
     

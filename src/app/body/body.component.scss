@@ -1071,25 +1071,3 @@ button:focus{
 .hrrh{
     margin: 0;
 }
-.grid-container-last{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 3.5px;
-    margin-top: 18px;
-    .grid-items-last{
-        p{
-            text-align: center;
-            margin: 5px 0px 5px 0px;
-            
-        }
-        img{
-            width: 280px;
-            height: 160px;
-
-        }
-    }
-
-}
-.grid-items-last:nth-child(2n+2){
-display: none;
-}

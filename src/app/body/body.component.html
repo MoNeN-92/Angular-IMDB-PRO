@@ -14,75 +14,76 @@
 
                 </div>
                 <div class="container">
-                    
-                        <div class="row">
-                            <div class="card-body">
-                                <div class="card-left-con">
-                                    <h2 class="card-title">{{slide.name}} <span>{{slide.year}}</span></h2>
-                                    <div class="movie-info">
-                                        <p class="rating-border">5.9</p>
-                                        <div class="movinf">
-                                            <p>Ratings: <span>{{slide.rating}}</span>/10 from <span>137,182 users</span>
-                                                &nbsp;
-                                                Metascore:<span> 89</span>/100</p>
 
-                                            <p>Reviews:<span>697 user</span> <span> 502 critic</span> &nbsp;
-                                                <span>46</span>from
-                                                <span> Metacritic.com</span>
-                                            </p>
-
-
-                                        </div>
-
-                                    </div>
-                                    <div class="mov-subtitle">
-                                        <h3 *ngIf="slide.description">summary</h3>
-                                        <p>{{slide.description}}</p>
-                                    </div>
-                                    <div class="director-writer">
-                                        <p>Director:<span>Rawson Marshall Thurber </span> &nbsp; &nbsp; Writer:
-                                            <span>Rawson
-                                                Marshall Thurber</span></p>
-                                    </div>
-                                    <div class="stars-actor">
-                                        <p>Stars: </p>
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/dr strange.jfif" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <img src="../../assets/img/portrat duain.jpg" alt="">
-                                        <button class="more-btn">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </button>
-                                    </div>
-                                    <div class="wach-list">
-                                        <button class="trailer">+ &nbsp; &nbsp; Wacht List</button>
-                                        <button class="trailer"> <i class="fa-solid carett fa-caret-right"></i> &nbsp;
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="card-left-con">
+                                <h2 class="card-title">{{slide.name}} <span>{{slide.year}}</span></h2>
+                                <div class="movie-info">
+                                    <p class="rating-border">5.9</p>
+                                    <div class="movinf">
+                                        <p>Ratings: <span>{{slide.rating}}</span>/10 from <span>137,182 users</span>
                                             &nbsp;
-                                            Wacht
-                                            Trailer</button>
+                                            Metascore:<span> 89</span>/100</p>
+
+                                        <p>Reviews:<span>697 user</span> <span> 502 critic</span> &nbsp;
+                                            <span>46</span>from
+                                            <span> Metacritic.com</span>
+                                        </p>
+
+
                                     </div>
+
                                 </div>
-
-
-
-
-
-
-
-                                <div class="card-right-img">
-                                    <a [routerLink]="'/MoviePage/' + slide.id "> <img src="{{slide.poster}}" alt=""></a>
-
-
+                                <div class="mov-subtitle">
+                                    <h3 *ngIf="slide.description">summary</h3>
+                                    <p>{{slide.description}}</p>
+                                </div>
+                                <div class="director-writer">
+                                    <p>Director:<span>Rawson Marshall Thurber </span> &nbsp; &nbsp; Writer:
+                                        <span>Rawson
+                                            Marshall Thurber</span>
+                                    </p>
+                                </div>
+                                <div class="stars-actor">
+                                    <p>Stars: </p>
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/dr strange.jfif" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <img src="../../assets/img/portrat duain.jpg" alt="">
+                                    <button class="more-btn">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                                <div class="wach-list">
+                                    <button class="trailer">+ &nbsp; &nbsp; Wacht List</button>
+                                    <button class="trailer"> <i class="fa-solid carett fa-caret-right"></i> &nbsp;
+                                        &nbsp;
+                                        Wacht
+                                        Trailer</button>
                                 </div>
                             </div>
+
+
+
+
+
+
+
+                            <div class="card-right-img">
+                                <a [routerLink]="'/MoviePage/' + slide.id "> <img src="{{slide.poster}}" alt=""></a>
+
+
+                            </div>
                         </div>
-                    
+                    </div>
+
 
                 </div>
             </div>
@@ -597,29 +598,32 @@
 
 
     <section>
-<div class="container">
-    <div class="capital serials-tvshows">
-        <button>
-            <h3 class="h3 seri" >Popular Serials</h3>
+        <div class="container">
+            <div class="capital serials-tvshows">
+                <button>
+                    <h3 class="h3 "> 
+                        <a class="seri" routerLink="/app-popular-series" routerLinkActive="active-bot" ariaCurrentWhenActive="page">
+                            Popular Serials
+                        </a>
+                     </h3>
+                           
 
-        </button>
-        <button>
-            <h3 class="h3 tvshow">Popular TV Shows</h3>  
-        </button>
-      
-    </div>
-    <div class="Bottom-linee w127"></div>
-    <hr class="hrrh">
-    <div class="grid-container-last" >
-        <div class="grid-items-last" *ngFor="let movie of SerialsData.pagination.data ">
-            <img  src="{{movie.backdrop }}" alt="">
-            <p>{{movie.name}} ({{movie.year}})</p>
+                </button>
+                <button>
+                    <h3 class="h3 tvshow"> <a class="seri" routerLink="/app-popular-tv-show"
+                            routerLinkActive="active-bot" ariaCurrentWhenActive="page">
+                            Popular TV Shows
+                        </a>
+                     </h3>
+                </button>
+
+            </div>
+            <div class="Bottom-linee w127"></div>
+            <hr class="hrrh">
+<router-outlet></router-outlet>
+
         </div>
-
-    </div>
-
-</div>
 
     </section>
 
-        <!-- last content end -->
+    <!-- last content end -->

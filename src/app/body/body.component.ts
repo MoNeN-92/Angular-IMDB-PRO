@@ -40,6 +40,7 @@ export class BodyComponent implements OnInit {
   
 
   constructor(
+    private route: ActivatedRoute,
     private Movielist: ImdbserviceService,
     private slider: ImdbserviceService,
     private activeRouter: ActivatedRoute,
@@ -76,21 +77,7 @@ export class BodyComponent implements OnInit {
 
     })
     
-    // this.stars.MovieStars().subscribe((data:any) => {
-    //   this.starss = data.filter((data:any) => {
-    //     const today = new Date();
-    //     const starDOB = new Date(data.dob);
-    //     console.log(this.starss.pagination.data)
 
-    //     return (
-    //       starDOB.getDate() === today.getDate() &&
-    //       starDOB.getMonth() === today.getMonth()
-         
-    //     );
-       
-    //   });
-    // }
-    // );
   
 
     // this.stars.MovieStars().subscribe(respo => {
