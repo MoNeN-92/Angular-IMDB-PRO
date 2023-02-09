@@ -82,18 +82,6 @@ export class BodyComponent implements OnInit {
     })
     
 
-  
-
-    // this.stars.MovieStars().subscribe(respo => {
-
-
-    //   this.MovieStar = respo
-      
-    //   console.log(this.MovieStar.pagination.data);
-
-    // })
-
-
     
     this.stars.MovieStars().subscribe(respo => {
       this.MovieStar = respo;
@@ -131,7 +119,6 @@ export class BodyComponent implements OnInit {
   }
 
   LeftClick() {
-    // this.carousel['left'] = (Number(this.carousel['left'].split('%')[0]) + 20) + "%"
     let newLeft = Number(this.carousel['left'].split('%')[0]) + 20;
     if (newLeft >= 0) {
       newLeft = -200;
@@ -165,8 +152,9 @@ export class BodyComponent implements OnInit {
 
   setSelectedMovie(movie: any) {
     this.selectedMovie = movie;
-  }
 
+
+  }
 
 
 
