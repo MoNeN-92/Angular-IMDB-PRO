@@ -365,6 +365,9 @@ object-fit:cover ;
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: 20px;
+    align-items: center;
+    justify-items: center;
+    
     div{
         display: flex;
         gap: 5px;
