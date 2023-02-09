@@ -11,6 +11,7 @@ export class MoviePageComponent implements OnInit {
 
   MovielistData:any;
   BackMoviePageData:any
+  
   MovieBackData:any
   starsPageData:any
   constructor(
@@ -33,9 +34,10 @@ export class MoviePageComponent implements OnInit {
  this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
           this.BackMoviePageData = ress
     
-              console.log(this.BackMoviePageData.title);
-              
-    
+          this.BackMoviePageData.title.credits.forEach((credit:any) => {
+            this.starsPageData = credit
+            console.log(credit.poster);
+          });
         })
 
         

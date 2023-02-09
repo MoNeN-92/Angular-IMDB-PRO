@@ -334,6 +334,11 @@ object-fit:cover ;
 .director {
     width: 30%;
     max-width: 30%;
+    hr{
+        width: 700px;
+        background-color: gray;
+        max-width: 100%;
+    }
 
     h4 {
         text-transform: capitalize;
@@ -341,8 +346,12 @@ object-fit:cover ;
 
     img {
         height: 50px;
-        width: 50px;
+        width: 60px;
         border-radius: 50%;
+    }
+    img:hover{
+        box-shadow: #171717 0px 0px 0px 1px;
+  
     }
 
     .span {
@@ -350,5 +359,14 @@ object-fit:cover ;
         font-size: 14px;
         text-transform: capitalize;
 
+    }
+}
+.bmovie-cast{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+    div{
+        display: flex;
+        gap: 5px;
     }
 }

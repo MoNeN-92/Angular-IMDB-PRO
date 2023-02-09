@@ -37,10 +37,14 @@ export class BodyComponent implements OnInit {
   MovieStar: any
   actors:any
   filteredData:any = []
-  
+  showDiv = {
+    previous : true,
+    next : false
+  }
+
+ 
 
   constructor(
-    private route: ActivatedRoute,
     private Movielist: ImdbserviceService,
     private slider: ImdbserviceService,
     private activeRouter: ActivatedRoute,
@@ -99,12 +103,14 @@ export class BodyComponent implements OnInit {
  
 
 
+    
 
 
     this.BackMoviePagee.BackMoviePage(this.id).subscribe((ress: any) => {
       this.BackMoviePageData = ress
 
       // console.log(this.BackMoviePageData.title);
+      
 
 
     })

@@ -444,12 +444,14 @@
 
 
                         </div>
-                        <a [routerLink]="'/MoviePage/' + selectedMovie.id ">
 
                             <div class="coming-img-content">
+                                
+                        <a [routerLink]="'/MoviePage/' + selectedMovie.id ">
                                 <img src="{{selectedMovie.backdrop}}" alt="">
+                            </a>
                             </div>
-                        </a>
+                   
                     </div>
 
 
@@ -475,8 +477,8 @@
 
                                                 <img class="poster1" src="{{movie.poster}} " alt="">
 
-                                                <img class="position-a play-icon" src="../../assets/img/Play Icon.png"
-                                                    alt="">
+                                                <img class="position-a play-icon" src="../../assets/img/Play Icon.png" alt="">
+                                                    
 
                                             </div>
                                             <p class="Movie-Name-font ">{{movie.name}}</p>
@@ -579,30 +581,17 @@
     </section>
 
 
-    <section class="ads-fluid">
-        <div class="container-fluid">
-            <div class="adscolor">
-
-
-                <div class="container">
-                    <div class="ads">
-                        <img class="ads-img" src="../../assets/img/lexsus.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- last content start -->
 
 
-    <section>
+    <section bottom-border>
         <div class="container">
             <div class="capital serials-tvshows">
                 <button>
-                    <h3 class="h3 "> 
-                        <a class="seri" routerLink="/app-popular-series" routerLinkActive="active-bot" ariaCurrentWhenActive="page">
+                    <h3 class="h3 tvseries"> 
+                        <a class="seri"  	(click)="showDiv.previous = !showDiv.previous = false;showDiv.next = false" >
                             Popular Serials
                         </a>
                      </h3>
@@ -610,9 +599,8 @@
 
                 </button>
                 <button>
-                    <h3 class="h3 tvshow"> <a class="seri" routerLink="/app-popular-tv-show"
-                            routerLinkActive="active-bot" ariaCurrentWhenActive="page">
-                            Popular TV Shows
+                    <h3 class="h3 tvshow"> <a class="seri" (click)="showDiv.next = !showDiv.next;showDiv.previous  = false">
+                            Popular Stars
                         </a>
                      </h3>
                 </button>
@@ -620,10 +608,32 @@
             </div>
             <div class="Bottom-linee w127"></div>
             <hr class="hrrh">
-<router-outlet></router-outlet>
+            <div class="grid-container-last" *ngIf="showDiv.previous" >
+                <div class="grid-items-last" *ngFor="let movie of SerialsData.pagination.data ">
+                    <a [routerLink]="'/MoviePage/' + movies.id ">
+
+                    <img  src="{{movie.backdrop }}" alt="">
+                    <p>{{movie.name}} ({{movie.year}})</p>
+                    </a>
+
+                </div>
+        
+            </div>
+            <div class="grid-container-last" *ngIf="showDiv.next" >
+                <div class="grid-items-last" *ngFor="let movie of SerialsData.pagination.data ">
+                    <a [routerLink]="'/MoviePage/' + movie.id ">
+
+                    <img  src="{{movie.poster }}" alt="">
+                    <p>{{movie.name}} ({{movie.year}})</p>
+                    </a>
+
+                </div>
+        
+            </div>
+
 
         </div>
 
     </section>
-
+    <div class="container-fluid bottom-border "></div>
     <!-- last content end -->

@@ -20,8 +20,7 @@ import { RegUserComponent } from './reg-user/reg-user.component';
 import { LoginComponent } from './login/login.component';
 import { FilterPipe } from './filter.pipe';
 import { FilterBornTodayPipe } from './filter-born-today.pipe';
-import { PopularSeriesComponent } from './popular-series/popular-series.component';
-import { PopularTvShowComponent } from './popular-tv-show/popular-tv-show.component';
+
 
 
 
@@ -39,8 +38,7 @@ import { PopularTvShowComponent } from './popular-tv-show/popular-tv-show.compon
     LoginComponent,
     FilterPipe,
     FilterBornTodayPipe,
-    PopularSeriesComponent,
-    PopularTvShowComponent,
+
   
     
     

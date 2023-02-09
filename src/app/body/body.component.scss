@@ -190,11 +190,16 @@
 
                 text-transform: uppercase;
                 color: #a3a3a3 !important;
+                
             }
+
 
             p {
                 color: #fefefe;
-                font-size: 12px;
+                font-size: 16px;
+                height: 80px;
+                width: 90%;
+                max-width: 100%;
 
 
             }
@@ -538,7 +543,7 @@ a {
 .movie-card {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-
+gap: 10px;
     .card-body1 {
         border: 1px solid transparent;
 
@@ -600,9 +605,11 @@ a {
 }
 
 .hide {
-    height: 877px;
+    height: 931px;
     overflow: hidden;
     transition: all 0.3;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
 
 }
 
@@ -831,6 +838,7 @@ img{
 }
 
 .capital {
+
     h3 {
         text-transform: capitalize;
     }
@@ -1041,12 +1049,14 @@ img{
 }
 
 .serials-tvshows{
+    margin-bottom: 12px;
 display: flex;
 .tvshow{
     margin-left: 25px;
     
 }
-h3{
+h3 a{
+
     cursor: pointer;
     color: #a1a1a1;
 }
@@ -1057,12 +1067,13 @@ button{
 
 }
 button:focus{
-    h3{
+    h3 a{
            color: #171717!important; 
  
     }
 
 }
+
 
 }
 .w127{
@@ -1070,4 +1081,36 @@ button:focus{
 }
 .hrrh{
     margin: 0;
+}
+.grid-container-last{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 3.5px;
+    margin-top: 18px;
+    .grid-items-last{
+        p{
+            text-align: center;
+            margin: 5px 0px 5px 0px;
+            
+        }
+        img{
+            width: 280px;
+            height: 160px;
+
+        }
+    }
+
+}
+.grid-items-last:nth-child(2n+2){
+display: none;
+}
+.active-bot{
+    color: #171717!important;
+}
+
+.bottom-border {
+    border-bottom: 5px solid #e1af12;
+    width: 100%;
+    margin-top: 12px;
+
 }

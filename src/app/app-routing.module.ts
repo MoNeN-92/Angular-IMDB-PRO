@@ -6,8 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { SerchPageComponent } from './serch-page/serch-page.component';
 import { RegUserComponent } from './reg-user/reg-user.component';
 import { LoginComponent } from './login/login.component';
-import { PopularSeriesComponent } from './popular-series/popular-series.component';
-import { PopularTvShowComponent } from './popular-tv-show/popular-tv-show.component';
+
 
 
 
@@ -39,15 +38,7 @@ const routes: Routes = [
   path:'reg-user',
   component:RegUserComponent
 },
-{
-  path:'app-popular-tv-show',
-  component:PopularTvShowComponent
-},
 
-{
-  path:'',
-  component:PopularSeriesComponent
-}
 
 
 ];
