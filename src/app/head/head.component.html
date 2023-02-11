@@ -9,7 +9,7 @@
             <div class="col">
                
                 <form action="" class="costum">
-                    <input #serchinput class="serch-inp " (keyup)="serchMovie($event)" (blur)="hideserch()"
+                    <input #serchinput class="serch-inp "  (keyup)="serchMovie($event)" (blur)="hideserch()"
                       placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
                       <ul class="serch-movie" *ngIf="searchResult">
                         <li *ngFor="let mov of searchResult.results">

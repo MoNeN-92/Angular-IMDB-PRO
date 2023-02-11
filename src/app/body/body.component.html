@@ -417,7 +417,8 @@
                 <div class="cover">
 
                     <div class="cover-img">
-                        <img src="../../assets/img/backcity.png" alt="">
+                        <img class="backd" src="../../assets/img/backcity.png" alt="">
+                        <img class="select-backdrop" *ngIf="selectedMovie" src="{{selectedMovie.backdrop}}" alt="">
                     </div>
                     <div class="container" *ngIf="selectedMovie">
                         <div class="com">

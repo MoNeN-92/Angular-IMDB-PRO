@@ -31,7 +31,12 @@ export class HeadComponent implements OnInit {
 
   ngOnInit(): void {
   }
- 
+
+
+
+  hideSearch() {
+    this.searchResult = null;
+  }
 
   serchMovie(query:KeyboardEvent){
 if (query){
