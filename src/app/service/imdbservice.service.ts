@@ -15,7 +15,7 @@ export class ImdbserviceService {
   ) { }
 
   GetMovieData(){
-    return this.http.get('https://imdb.ge/secure/titles');
+    return this.http.get('https://imdb.ge/secure/titles?perPage=50');
 }
 GetSliderData(){
   return this.http.get('https://imdb.ge/secure/homepage/lists');
@@ -35,8 +35,5 @@ serchMovie(query:any){
 MovieStars(){
   return this.http.get(`https://imdb.ge/secure/people?perPage=4&order=popularity:desc`)
 }
-
-
-
 
 }

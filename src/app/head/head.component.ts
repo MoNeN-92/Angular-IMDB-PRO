@@ -11,7 +11,17 @@ import { ActivatedRoute , Router} from '@angular/router';
 export class HeadComponent implements OnInit {
 
   searchResult:any
-
+  selectedOption: any;
+  showDropdown = false;
+  
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+  }
+  
+  selectOption(option: string) {
+    this.selectedOption = option;
+    this.showDropdown = false;
+  }
   constructor(
     private movies:ImdbserviceService,
     private route:Router,
@@ -21,6 +31,7 @@ export class HeadComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ 
 
   serchMovie(query:KeyboardEvent){
 if (query){

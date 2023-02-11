@@ -8,10 +8,10 @@ import { ImdbserviceService } from '../service/imdbservice.service';
   styleUrls: ['./movie-page.component.scss']
 })
 export class MoviePageComponent implements OnInit {
-
+  MovieRating:any
   MovielistData:any;
   BackMoviePageData:any
-  
+  rating: number;
   MovieBackData:any
   starsPageData:any
   constructor(
@@ -21,22 +21,27 @@ export class MoviePageComponent implements OnInit {
     private MovieBack:ImdbserviceService,
     private starsPage:ImdbserviceService
 
-  ) { }
+  ) {  this.rating = 0; }
 
  
       id = this.activeRouter.snapshot.paramMap.get('id');
 
 
+ 
+
   ngOnInit(): void {
 
 
+ 
+    
 
  this.BackMoviePage.BackMoviePage(this.id).subscribe((ress:any)=> {
           this.BackMoviePageData = ress
-    
+            // console.log(ress.seo);
+
           this.BackMoviePageData.title.credits.forEach((credit:any) => {
             this.starsPageData = credit
-            console.log(credit.poster);
+            // console.log(credit.poster);
           });
         })
 
@@ -48,6 +53,10 @@ console.log(this.activeRouter.snapshot);
 
 this.Movielist.GetMovieData().subscribe((res:any)=> {
   this.MovielistData = res
+
+  // console.log(this.MovielistData);
+
+  
 // console.log(this.MovielistData.pagination.data);
 
   

@@ -19,15 +19,19 @@
                         </li>
                     </ul>
                     <input type="hidden" name="data-chose" value="">
-                    <h6 class="chose-serch"><span>ALL</span> <i class="fa-solid carett fa-caret-down"></i></h6>
-                    <ul class="Chose">
-                        <li data-chos="Movies">Movies</li>
-                        <li data-chos="TV shows">TV shows</li>
-                        <li data-chos="Celebrities">Celebrities</li>
-                    </ul>
+                    <h6 class="chose-serch" (click)="toggleDropdown()">
+                        <span>{{selectedOption || 'ALL'}}</span> 
+                        <i [class.fa-caret-down]="showDropdown" [class.fa-caret-left]="!showDropdown" class="fa-solid carett"></i>
+                    </h6>
+                      
+                      <ul class="Chose" *ngIf="showDropdown">
+                        <li (click)="selectOption('Movies')">Movies</li>
+                        <li (click)="selectOption('TV shows')">TV shows</li>
+                        <li (click)="selectOption('Celebrities')">Celebrities</li>
+                      </ul>
+                      
                     <button type='button' (click)="submitSerch(serchinput.value)" class="serch-btn">
-                        <img src="../../assets/img/Search Icon.png" alt="">
-                    </button>
+                        <i class="fa-solid fa-magnifying-glass"></i>                    </button>
                 </form>
                
             </div>
@@ -38,11 +42,11 @@
                          <a routerLink="login"><span class="cursor-pointer">sign in</span></a> 
                           <i class="fa-solid carett fa-caret-down"></i>
                         </h6>
-                        <ul class="Chose">
+                        <!-- <ul class="Chose">
                             <li data-chos="Movies">Watchlist</li>
                             <li data-chos="TV shows">settings</li>
                             <li data-chos="Celebrities">Logout</li>
-                        </ul>
+                        </ul> -->
                 </div>
             </div>
             <div class="col">

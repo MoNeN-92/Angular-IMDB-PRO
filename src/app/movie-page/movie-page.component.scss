@@ -321,7 +321,7 @@ object-fit:cover ;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-right: 5px solid #685d50;
+        // border-right: 5px solid #685d50;
         font-size: 32px !important;
         font-weight: bold;
         margin-right: 20px;
@@ -330,6 +330,10 @@ object-fit:cover ;
     }
 
 }
+.border-color{
+    background-color: green;
+}
+
 
 .director {
     width: 30%;
@@ -367,7 +371,7 @@ object-fit:cover ;
     gap: 20px;
     align-items: center;
     justify-items: center;
-    
+
     div{
         display: flex;
         gap: 5px;

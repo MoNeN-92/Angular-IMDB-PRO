@@ -8,9 +8,9 @@
 
             <div class="play-trailer">
 
-                <div class="play-icon">
+                <!-- <div class="play-icon">
                     <img src="../../assets/img/Play Button.png" alt="">
-                </div>
+                </div> -->
             </div>
 
             <div class="watch-buttons">
@@ -95,7 +95,11 @@
 
                 </div>
                 <div class="movie-info">
-                    <p class="rating-border">5.9</p>
+                    <!-- <p class="rating-border">5.9</p> -->
+                    <!-- <p class="rating-border" [style.border-color]="getBorderColor(rating)">{{rating}}</p> -->
+                    <p  class="rating-border">{{rating}}</p>
+
+
                     <div class="movinf">
                         <p>Ratings: <span>5.9</span>/10 from <span>137,182 users</span> &nbsp;
                             Metascore:<span> 89</span>/100</p>
@@ -116,7 +120,7 @@
                         <hr>
                         <div class="bmovie-cast">
                         <div  *ngFor="let credit of BackMoviePageData.title.credits">
-                        <img *ngIf="credit.poster " src="{{credit.poster}}" alt=""> <p *ngIf="credit.name"> {{credit.name}}</p> 
+                        <img *ngIf="credit.poster " src="{{credit.poster}}" alt=""> <p *ngIf="credit.name"> {{credit.name}} {{credit.actor}}</p> 
 
                         </div>
                     </div>

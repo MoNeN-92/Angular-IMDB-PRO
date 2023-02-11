@@ -542,11 +542,10 @@ a {
 
 .movie-card {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(5, 19%);
 gap: 10px;
     .card-body1 {
         border: 1px solid transparent;
-
 
         .Movie-year {
             opacity: 0.800;

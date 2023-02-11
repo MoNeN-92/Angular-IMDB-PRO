@@ -139,8 +139,21 @@ ul li {
         }
 
         .Chose {
-            display: none;
+            display: block;
+            position: absolute;
+            background-color: #e1af12;
+            z-index: 50;
+            top: 7%;
+            right: 35.5%;
+            width: 107px;
+            cursor: pointer;
+                padding: 8px;
+            
         }
+        .Chose li:hover{
+            background-color: #999292;
+        }
+
 
         .costum {
             display: flex;
