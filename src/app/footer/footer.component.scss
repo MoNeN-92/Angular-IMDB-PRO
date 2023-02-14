@@ -90,3 +90,15 @@
         }
     }
 }
+
+@media (max-width:800px) {
+.row{
+    flex-direction: column;
+}
+.imdb-evry{
+    margin: auto;
+}
+.right-content{
+    margin: auto;
+}
+}

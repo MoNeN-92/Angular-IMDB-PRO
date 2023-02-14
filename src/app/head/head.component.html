@@ -9,7 +9,7 @@
             <div class="col">
                
                 <form action="" class="costum">
-                    <input #serchinput class="serch-inp "  (keyup)="serchMovie($event)" (blur)="hideserch()"
+                    <input #serchinput class="serch-inp"  (keyup)="serchMovie($event)" (blur)="hideserch()"
                       placeholder="Find Movies, TV Shows, Celebrities and More" value="" name="data-serch" type="text">
                       <ul class="serch-movie" *ngIf="searchResult">
                         <li *ngFor="let mov of searchResult.results">
@@ -18,18 +18,22 @@
                                 </a>
                         </li>
                     </ul>
+                    <div>
+                        <div class="chose-se">
                     <input type="hidden" name="data-chose" value="">
                     <h6 class="chose-serch" (click)="toggleDropdown()">
                         <span>{{selectedOption || 'ALL'}}</span> 
                         <i [class.fa-caret-down]="showDropdown" [class.fa-caret-left]="!showDropdown" class="fa-solid carett"></i>
                     </h6>
-                      
+                </div>
+                <div class="chose-opt">
                       <ul class="Chose" *ngIf="showDropdown">
                         <li (click)="selectOption('Movies')">Movies</li>
                         <li (click)="selectOption('TV shows')">TV shows</li>
                         <li (click)="selectOption('Celebrities')">Celebrities</li>
                       </ul>
-                      
+                    </div>
+                    </div>
                     <button type='button' (click)="submitSerch(serchinput.value)" class="serch-btn">
                         <i class="fa-solid fa-magnifying-glass"></i>                    </button>
                 </form>

@@ -97,6 +97,7 @@ ul li {
         }
         .chose-serch{
             cursor: pointer;
+            height: 35px;
             span {
                 color: #acacac;
                 font-size: 12px!important;
@@ -109,7 +110,6 @@ ul li {
             margin-left: 41px;
 
             h6 {
-
                 border-radius: 3px;
                 display: flex;
                 justify-content: space-between;
@@ -137,12 +137,19 @@ ul li {
             }
 
         }
+        .chose-se{
+            position: relative;
+        }
+        .chose-opt{
+            position: absolute;
+            z-index: 50;
+        }
 
         .Chose {
+
             display: block;
-            position: absolute;
+            // position: absolute;
             background-color: #e1af12;
-            z-index: 50;
             top: 7%;
             right: 35.5%;
             width: 107px;
@@ -228,4 +235,32 @@ cursor: pointer;
     width: 30px;
     float: right;
     border-radius: 50%;
+}
+
+@media (max-width:800px) {
+    .container-fluid{
+        width:100%;
+        max-width: 100%;
+    }
+
+        .login{
+            display: block;
+            margin: 0px!important;
+        }
+        .language{
+            display: block;
+            margin: 0px!important;
+        }
+        .row{
+            justify-content: center;
+
+        }
+    
+    .costum{
+        input{
+            width: 50%!important;
+           margin: 0px!important;
+        }
+           
+    }
 }

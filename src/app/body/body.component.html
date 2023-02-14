@@ -78,6 +78,10 @@
 
                             <div class="card-right-img">
                                 <a [routerLink]="'/MoviePage/' + slide.id "> <img src="{{slide.poster}}" alt=""></a>
+                                <div class="mov-subtitle d-none">
+                                    <h3 *ngIf="slide.description">summary</h3>
+                                    <p>{{slide.description | slice : 0 :40}}</p>
+                                </div>
 
 
                             </div>
@@ -369,7 +373,7 @@
 
 
                 <div class="card-body1" *ngFor="let movies of MovielistData.pagination.data">
-                    <a [routerLink]="'/MoviePage/' + movies.id ">
+                    <!-- <a [routerLink]="'/MoviePage/' + movies.id "> -->
 
                         <div class="position-r background-img ">
                             <img class="poster" src="{{movies.poster}}" alt="">
@@ -377,7 +381,7 @@
                         </div>
                         <p class="Movie-Name">{{movies.name}} </p>
                         <p class="Movie-year">{{movies.year}}</p>
-                    </a>
+                    <!-- </a> -->
                 </div>
 
 

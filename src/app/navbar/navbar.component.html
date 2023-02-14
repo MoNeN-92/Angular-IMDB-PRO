@@ -2,9 +2,18 @@
     <div class="container-fluid ">
         <div class="backfilter container">
               <div class="container">
+                <button (click)="toggleDropdown()" class="dropdown-button">
+                <div class="dro-menu ">
+                    <span  class="dro-menu-child-1"></span>
+                    <span [class.dro-menu-left-span]="isDropdownOpen" class="dro-menu-child-2"></span>
+                    <span class="dro-menu-child-3"></span>
+                </div>
+            </button>
+           
+
             <div class="row">
                 <div class="backroundtransp">
-                       <ul class="text-uppercase discover navbarlist">
+                       <ul class="text-uppercase discover navbarlist" [ngClass]="{'dropdown-open': isDropdownOpen}">
                     <li ><a class=" "  routerLinkActive="router-link-active">discover</a> </li>
                 
                     <li class="drophover"><a  routerLinkActive="router-link-active"  >movies</a>   <div class="dropdown">
